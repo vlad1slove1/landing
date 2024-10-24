@@ -3,7 +3,7 @@ import MobileMenu from '@/components/mobile/MobileMenu';
 import { NavItems } from '@/components/nav/NavItems';
 import { Path } from '@/lib/enums';
 import ThemeSwitch from '@/components/nav/ThemeSwitch';
-import siteConfig from '@/config/SiteConfig';
+import siteConfig from '@/config/siteConfig';
 import { Link } from '@nextui-org/link';
 import { Logo } from '@/components/Icons';
 

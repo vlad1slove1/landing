@@ -3,7 +3,7 @@ import Providers from '@/app/providers';
 import Footer from '@/components/nav/Footer';
 import Header from '@/components/nav/Header';
 import { fontSans } from '@/config/fonts';
-import siteConfig from '@/config/SiteConfig';
+import siteConfig from '@/config/siteConfig';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';

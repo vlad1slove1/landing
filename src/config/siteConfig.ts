@@ -9,10 +9,15 @@ export type SiteConfigProps = {
         navItems: NavItem[];
     };
     footer: {
+        about: string;
+        socialAnnounce: string;
         socials: ListItem[];
-        products: ListItem[];
-        links: ListItem[];
-        contactItems: ListItem[];
+        firstSectionLabel: string;
+        firstSectionItems: ListItem[];
+        secondSectionLabel: string;
+        secondSectionItems: ListItem[];
+        contactSectionLabel: string;
+        contactSectionItems: ListItem[];
     };
 };
 
@@ -67,26 +72,27 @@ const siteConfig: SiteConfigProps = {
         ],
     },
     footer: {
+        about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        socialAnnounce: 'Следите за нами в социальных сетях',
         socials: [
             { icon: 'telegram', href: SocialMediaLink.TELEGRAM },
             { icon: 'vk', href: SocialMediaLink.VK },
-            { icon: 'facebook', href: SocialMediaLink.FACEBOOK },
-            { icon: 'twitter', href: SocialMediaLink.TWITTER },
-            { icon: 'instagram', href: SocialMediaLink.INSTAGRAM },
-            { icon: 'linkedin', href: SocialMediaLink.LINKEDIN },
             { icon: 'github', href: SocialMediaLink.GITHUB },
         ],
-        products: [
+        firstSectionLabel: 'Решения',
+        firstSectionItems: [
             { label: 'Решение №1', href: Path.SOLUTIONS },
             { label: 'Решение №2', href: Path.SOLUTIONS },
             { label: 'Решение №3', href: Path.SOLUTIONS },
         ],
-        links: [
+        secondSectionLabel: 'Полезные ссылки',
+        secondSectionItems: [
             { label: 'Тарифы', href: Path.PRICING },
             { label: 'Полезное', href: Path.MISC },
             { label: 'О нас', href: Path.ABOUT },
         ],
-        contactItems: [
+        contactSectionLabel: 'Контакты',
+        contactSectionItems: [
             { icon: 'home', label: '119049 г. Москва, ул. Донская, д. 8 стр. 1' },
             {
                 icon: 'letter',
