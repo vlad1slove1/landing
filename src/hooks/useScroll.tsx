@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const useScroll = () => {
+const useScroll = (): boolean => {
     const [scrolled, setScrolled] = useState(false);
 
     const handleScroll = () => {

@@ -1,12 +1,13 @@
 import './globals.css';
 import Providers from '@/app/providers';
-import Footer from '@/components/nav/Footer';
+import Footer from '@/components/Footer';
 import Header from '@/components/nav/Header';
 import { fontSans } from '@/config/fonts';
 import siteConfig from '@/config/siteConfig';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
+import MainContainer from '@/components/MainContainer';
 
 export const metadata: Metadata = {
     title: {
@@ -42,9 +43,7 @@ export default function RootLayout({
                 <Providers>
                     <div className="flex flex-col h-screen">
                         <Header />
-                        <main className="container mx-auto max-w-7xl my-14 pt-8 px-6 flex-grow">
-                            {children}
-                        </main>
+                        <MainContainer children={children} />
                         <Footer />
                     </div>
                 </Providers>

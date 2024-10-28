@@ -1,6 +1,7 @@
 import { ListItem } from '@/components/ListItem';
 import { NavItem } from '@/types/navItem';
 import { Path, SocialMediaLink } from '@/lib/enums';
+import { Input } from '@/types/input';
 
 export type SiteConfigProps = {
     name: string;
@@ -18,6 +19,12 @@ export type SiteConfigProps = {
         secondSectionItems: ListItem[];
         contactSectionLabel: string;
         contactSectionItems: ListItem[];
+    };
+    login: {
+        title: string;
+        subtitle: string;
+        inputs: Record<string, Input>;
+        submitButtonLabel: string;
     };
 };
 
@@ -101,6 +108,23 @@ const siteConfig: SiteConfigProps = {
             },
             { icon: 'phone', label: '+1234567890', href: 'tel:+1234567890' },
         ],
+    },
+    login: {
+        title: 'Авторизация',
+        subtitle: 'После авторизации вас перенаправит на панель администратора',
+        inputs: {
+            user: {
+                label: 'Пользователь',
+                type: 'text',
+                icon: 'user',
+            },
+            password: {
+                label: 'Пароль',
+                type: 'password',
+                icon: 'eye',
+            },
+        },
+        submitButtonLabel: 'Войти',
     },
 };
 

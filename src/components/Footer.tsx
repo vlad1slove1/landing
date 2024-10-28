@@ -6,9 +6,13 @@ import { Logo, socialIcon } from '@/components/Icons';
 import siteConfig from '@/config/siteConfig';
 import { Path } from '@/lib/enums';
 import { Link } from '@nextui-org/link';
+import useIsAuthPage from '@/hooks/useIsAuthPage';
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
+    const isAdminPage = useIsAuthPage();
+
+    if (isAdminPage) return null;
 
     return (
         <footer className="bg-gradient-to-b from-primary/50 to-primary text-center text-foreground lg:text-left">
@@ -26,7 +30,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Main container */}
+                {/* MainContainer container */}
                 <div className="py-10 md:text-left text-left">
                     <div className="grid-1 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         {/* Company about section */}

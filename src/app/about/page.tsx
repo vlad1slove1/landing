@@ -1,3 +1,3 @@
-export default function Page() {
+export default function ProtectedPage() {
     return <div>ABOUT PAGE</div>;
 }

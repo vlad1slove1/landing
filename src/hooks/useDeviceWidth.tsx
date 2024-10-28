@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useDeviceWidth = (breakpoint: number) => {
+const useDeviceWidth = (breakpoint: number): boolean => {
     const [width, setWidth] = useState(false);
 
     useEffect(() => {
