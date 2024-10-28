@@ -6,6 +6,8 @@ import { authUser } from '@/services/authService';
 import siteConfig from '@/config/siteConfig';
 import { commonIcon } from '@/components/Icons';
 import SubmitButton from '@/components/SubmitButton';
+import { Link } from '@nextui-org/link';
+import { Path } from '@/lib/enums';
 
 const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
     const [formState, setFormState] = useState({
@@ -101,6 +103,15 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                     >
                         {siteConfig.login.submitButtonLabel}
                     </SubmitButton>
+                </div>
+
+                <div className="!mt-8 flex justify-self-end">
+                    <Link
+                        href={Path.HOME}
+                        className="text-blue-600 hover:text-blue-500 font-semibold text-xs"
+                    >
+                        на главную
+                    </Link>
                 </div>
             </form>
         </div>
