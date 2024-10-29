@@ -8,6 +8,7 @@ import { commonIcon } from '@/components/Icons';
 import SubmitButton from '@/components/SubmitButton';
 import { Link } from '@nextui-org/link';
 import { Path } from '@/lib/enums';
+import clsx from 'clsx';
 
 const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
     const [formState, setFormState] = useState({
@@ -57,7 +58,12 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
     };
 
     return (
-        <div className="border border-gray-300 rounded-lg p-6 max-w-md shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] max-md:mx-auto">
+        <div
+            className={clsx(
+                'border-1.5 rounded-lg p-6 max-w-md shadow-lg max-md:mx-auto',
+                formState.error ? 'border-danger' : 'border-gray-300'
+            )}
+        >
             <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="mb-8">
                     <h3 className="text-gray-800 text-3xl font-extrabold">
@@ -69,7 +75,7 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                 </div>
 
                 <InputField
-                    placeholder={siteConfig.login.inputs['user']?.label}
+                    placeholder={siteConfig.login.inputs[0]?.label}
                     type="text"
                     name="username"
                     value={formState.username}
@@ -79,14 +85,17 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                 />
 
                 <InputField
-                    placeholder={siteConfig.login.inputs['password']?.label}
+                    placeholder={siteConfig.login.inputs[1]?.label}
                     type={formState.showPassword ? 'text' : 'password'}
                     name="password"
                     value={formState.password}
                     onChange={handleChange}
-                    onFocus={() => setFormState((prev) => ({ ...prev, error: '' }))}
                     className="text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600"
-                    icon={<commonIcon.eye />}
+                    icon={
+                        <commonIcon.eye
+                            className={clsx({ 'fill-yellow-200': formState.showPassword })}
+                        />
+                    }
                     onIconClick={togglePasswordVisibility}
                     animateIcon
                 />

@@ -9,7 +9,6 @@ import { Link } from '@nextui-org/link';
 import useIsAuthPage from '@/hooks/useIsAuthPage';
 
 const Footer: React.FC = () => {
-    const currentYear = new Date().getFullYear();
     const isAdminPage = useIsAuthPage();
 
     if (isAdminPage) return null;
@@ -19,11 +18,11 @@ const Footer: React.FC = () => {
             <div className="container mx-auto max-w-7xl px-6 ">
                 <div className="flex items-center justify-center border-b-2 border-foreground/50 p-6 dark:border-foreground/50 lg:justify-between">
                     <div className="mr-12 hidden lg:block">
-                        <span>{siteConfig.footer.socialAnnounce}</span>
+                        <span>{siteConfig.footer.socialsSection.label}</span>
                     </div>
                     {/* Social network icons container */}
                     <div className="flex justify-center gap-2">
-                        {siteConfig.footer.socials.map(({ icon, href }) => {
+                        {siteConfig.footer.socialsSection.items.map(({ icon, href }) => {
                             const Icon = socialIcon[icon as keyof typeof socialIcon];
                             return <Icon key={`${icon}_icon`} href={href} />;
                         })}
@@ -43,27 +42,27 @@ const Footer: React.FC = () => {
                             </h6>
                             <p>{siteConfig.footer.about}</p>
                         </div>
-                        {/* Products section */}
+                        {/* First section */}
                         <div className="flex flex-col lg:items-center">
                             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                                {siteConfig.footer.firstSectionLabel}
+                                {siteConfig.footer.sections[0].label}
                             </h6>
-                            <ListItems items={siteConfig.footer.firstSectionItems} />
+                            <ListItems items={siteConfig.footer.sections[0].items} />
                         </div>
-                        {/* Useful secondSectionItems section */}
+                        {/* Second section */}
                         <div className="flex flex-col lg:items-center">
                             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                                {siteConfig.footer.secondSectionLabel}
+                                {siteConfig.footer.sections[1].label}
                             </h6>
-                            <ListItems items={siteConfig.footer.secondSectionItems} />
+                            <ListItems items={siteConfig.footer.sections[1].items} />
                         </div>
                         {/* Contact section */}
                         <div>
                             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                                {siteConfig.footer.contactSectionLabel}
+                                {siteConfig.footer.contactSection.label}
                             </h6>
                             <div className="flex flex-col justify-start gap-4">
-                                {siteConfig.footer.contactSectionItems.map(
+                                {siteConfig.footer.contactSection.items.map(
                                     ({ icon, label, href }) => {
                                         return (
                                             <ListItem
@@ -87,7 +86,7 @@ const Footer: React.FC = () => {
                 <Link href={Path.HOME} className="static text-foreground hover:text-secondary">
                     {siteConfig.name}
                 </Link>
-                <span>{currentYear}</span>
+                <span>{new Date().getFullYear()}</span>
             </div>
         </footer>
     );
