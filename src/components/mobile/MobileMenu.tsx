@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import MobileMenuToggle from './MobileMenuToggle';
-import { commonIcon } from '@/components/Icons';
+import { commonIcon } from '@/components/icon/Icons';
 import { NavItem } from '@/types/navItem';
 import { Link } from '@nextui-org/link';
 import { AnimatePresence, motion } from 'framer-motion';

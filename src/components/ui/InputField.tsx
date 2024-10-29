@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
-import IconButton from '@/components/IconButton';
+import IconButton from '@/components/icon/IconButton';
 
 export type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
     label?: string;

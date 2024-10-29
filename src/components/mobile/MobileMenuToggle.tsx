@@ -1,6 +1,6 @@
-import IconAnimationWrapper from '@/components/IconAnimationWrapper';
+import IconAnimationWrapper from '@/components/icon/IconAnimationWrapper';
 import React from 'react';
-import { commonIcon } from '@/components/Icons';
+import { commonIcon } from '@/components/icon/Icons';
 import clsx from 'clsx';
 
 type Props = {

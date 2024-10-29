@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, ReactNode } from 'react';
-import { commonIcon } from '@/components/Icons';
+import { commonIcon } from '@/components/icon/Icons';
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
     children: ReactNode;

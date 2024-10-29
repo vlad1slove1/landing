@@ -5,8 +5,8 @@ import { useTheme } from 'next-themes';
 import { useIsSSR } from '@react-aria/ssr';
 import { SwitchProps, useSwitch } from '@nextui-org/switch';
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import { themeSwitchIcon } from '@/components/Icons';
-import IconAnimationWrapper from '@/components/IconAnimationWrapper';
+import { themeSwitchIcon } from '@/components/icon/Icons';
+import IconAnimationWrapper from '@/components/icon/IconAnimationWrapper';
 import clsx from 'clsx';
 
 export type Props = {

@@ -1,4 +1,4 @@
-import { ListItem } from '@/components/ListItem';
+import { ListItem } from '@/components/ui/ListItem';
 import { NavItem } from '@/types/navItem';
 import { Path, SocialMediaLink } from '@/lib/enums';
 import { Input } from '@/types/input';

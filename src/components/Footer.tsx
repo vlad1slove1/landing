@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ListItem, ListItems } from '@/components/ListItem';
-import { Logo, socialIcon } from '@/components/Icons';
+import { ListItems } from '@/components/ui/ListItem';
+import { Logo, socialIcon } from '@/components/icon/Icons';
 import siteConfig from '@/config/siteConfig';
 import { Path } from '@/lib/enums';
 import { Link } from '@nextui-org/link';
@@ -62,18 +62,7 @@ const Footer: React.FC = () => {
                                 {siteConfig.footer.contactSection.label}
                             </h6>
                             <div className="flex flex-col justify-start gap-4">
-                                {siteConfig.footer.contactSection.items.map(
-                                    ({ icon, label, href }) => {
-                                        return (
-                                            <ListItem
-                                                key={`${icon}_icon`}
-                                                icon={icon}
-                                                label={label}
-                                                href={href}
-                                            />
-                                        );
-                                    }
-                                )}
+                                <ListItems items={siteConfig.footer.contactSection.items} />
                             </div>
                         </div>
                     </div>

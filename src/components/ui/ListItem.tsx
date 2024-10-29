@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@nextui-org/link';
-import { commonIcon } from '@/components/Icons';
+import { commonIcon } from '@/components/icon/Icons';
 
 export type ListItem = {
     label?: string;

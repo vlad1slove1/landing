@@ -1,7 +1,7 @@
 import './globals.css';
 import Providers from '@/app/providers';
 import Footer from '@/components/Footer';
-import Header from '@/components/nav/Header';
+import Header from '@/components/Header';
 import { fontSans } from '@/config/fonts';
 import siteConfig from '@/config/siteConfig';
 import clsx from 'clsx';

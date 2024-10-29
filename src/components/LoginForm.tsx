@@ -1,11 +1,11 @@
 'use client';
 
 import React, { FormEvent, useState } from 'react';
-import InputField from '@/components/InputField';
+import InputField from '@/components/ui/InputField';
 import { authUser } from '@/services/authService';
 import siteConfig from '@/config/siteConfig';
-import { commonIcon } from '@/components/Icons';
-import SubmitButton from '@/components/SubmitButton';
+import { commonIcon } from '@/components/icon/Icons';
+import SubmitButton from '@/components/ui/SubmitButton';
 import { Link } from '@nextui-org/link';
 import { Path } from '@/lib/enums';
 import clsx from 'clsx';
