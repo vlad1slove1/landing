@@ -22,9 +22,10 @@ const DropdownButton: React.FC<Props> = ({ item, openDropdown, onMouseEnter, onM
                 className={`flex items-center space-x-2 rounded-lg focus:outline-none ${
                     openDropdown === item.label ? 'text-secondary' : 'hover:text-secondary'
                 }`}
-                aria-label="Dropdown button"
+                aria-label={`Open ${item.label} dropdown`} // Improved aria-label
                 aria-haspopup="true"
                 aria-expanded={openDropdown === item.label}
+                role="button" // Optional, as it's inherently a button
             >
                 <span>{item.label}</span>
                 <icons.chevronRight
@@ -44,6 +45,7 @@ const DropdownButton: React.FC<Props> = ({ item, openDropdown, onMouseEnter, onM
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.1 }}
                         className="absolute p-1 overflow-hidden"
+                        role="menu"
                     >
                         <ul className="my-2 flex flex-col border-1 shadow-xl bg-background divide-y-2">
                             {item.children?.map(({ href, label, description }) => (

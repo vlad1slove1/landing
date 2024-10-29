@@ -12,12 +12,12 @@ const icons = {
 };
 
 export const DropdownCardItem: React.FC<Props> = ({ href, label, description, onClick }) => (
-    <li className="max-w-md p-4 bg-content1 group hover:bg-primary/50">
+    <li className="max-w-md p-4 bg-content1 group hover:bg-primary/50" role="menuitem">
         <Link
             href={href}
             onClick={onClick}
             className="flex flex-col items-start justify-between"
-            aria-label={`${label}: ${description}`}
+            aria-label={`Go to ${label}: ${description}`}
         >
             <div className="flex items-center justify-between w-full mb-2">
                 <p className="text-lg font-medium text-gray-900 dark:text-gray-50">{label}</p>

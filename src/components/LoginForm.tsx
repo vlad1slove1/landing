@@ -82,6 +82,7 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                     onChange={handleChange}
                     className="text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-lg outline-blue-600"
                     icon={<commonIcon.user />}
+                    aria-label={siteConfig.login.inputs[0]?.label}
                 />
 
                 <InputField
@@ -98,6 +99,7 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                     }
                     onIconClick={togglePasswordVisibility}
                     animateIcon
+                    aria-label={siteConfig.login.inputs[1]?.label}
                 />
 
                 {formState.error && (
@@ -109,6 +111,7 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                         type="submit"
                         isLoading={formState.loading}
                         className="w-full shadow-xl py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+                        aria-label={siteConfig.login.submitButtonLabel}
                     >
                         {siteConfig.login.submitButtonLabel}
                     </SubmitButton>
@@ -118,6 +121,7 @@ const LoginForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
                     <Link
                         href={Path.HOME}
                         className="text-blue-600 hover:text-blue-500 font-semibold text-xs"
+                        aria-label="Back to home page"
                     >
                         на главную
                     </Link>
