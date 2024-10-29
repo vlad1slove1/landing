@@ -34,33 +34,33 @@ const Footer: React.FC = () => {
                     <div className="grid-1 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         {/* Company about section */}
                         <div>
-                            <h6 className="mb-4 flex items-center justify-center font-semibold md:justify-start space-x-2">
+                            <h2 className="mb-4 flex items-center justify-center font-semibold md:justify-start space-x-2">
                                 <Link href={Path.HOME} className="static">
                                     <Logo />
                                 </Link>
                                 <span className="uppercase">{siteConfig.name}</span>
-                            </h6>
+                            </h2>
                             <p>{siteConfig.footer.about}</p>
                         </div>
                         {/* First section */}
                         <div className="flex flex-col lg:items-center">
-                            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                            <h3 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                                 {siteConfig.footer.sections[0].label}
-                            </h6>
+                            </h3>
                             <ListItems items={siteConfig.footer.sections[0].items} />
                         </div>
                         {/* Second section */}
                         <div className="flex flex-col lg:items-center">
-                            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                            <h3 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                                 {siteConfig.footer.sections[1].label}
-                            </h6>
+                            </h3>
                             <ListItems items={siteConfig.footer.sections[1].items} />
                         </div>
                         {/* Contact section */}
                         <div>
-                            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                            <h3 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                                 {siteConfig.footer.contactSection.label}
-                            </h6>
+                            </h3>
                             <div className="flex flex-col justify-start gap-4">
                                 <ListItems items={siteConfig.footer.contactSection.items} />
                             </div>

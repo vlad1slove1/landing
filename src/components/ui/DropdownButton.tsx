@@ -22,6 +22,7 @@ const DropdownButton: React.FC<Props> = ({ item, openDropdown, onMouseEnter, onM
                 className={`flex items-center space-x-2 rounded-lg focus:outline-none ${
                     openDropdown === item.label ? 'text-secondary' : 'hover:text-secondary'
                 }`}
+                aria-label="Dropdown button"
                 aria-haspopup="true"
                 aria-expanded={openDropdown === item.label}
             >

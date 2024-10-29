@@ -37,13 +37,15 @@ const util = {
                 </svg>
             );
 
-            return href ? (
-                <Link isExternal href={href} className="static">
-                    {svgElement}
-                </Link>
-            ) : (
-                svgElement
-            );
+            if (href) {
+                return (
+                    <Link isExternal href={href} className="static" aria-label={`link_${href}`}>
+                        {svgElement}
+                    </Link>
+                );
+            }
+
+            return svgElement;
         };
     },
 };

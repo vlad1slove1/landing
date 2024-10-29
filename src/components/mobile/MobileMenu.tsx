@@ -101,6 +101,7 @@ const MobileDropdownItem: React.FC<MobileDropdownItemProps> = ({
         <div>
             <button
                 onClick={onToggleDropdown}
+                aria-label="Mobile dropdown item"
                 className="flex items-center justify-between w-full text-lg font-medium text-foreground"
             >
                 <span className="hover:text-secondary">{item.label}</span>

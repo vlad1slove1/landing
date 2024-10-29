@@ -8,7 +8,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const SubmitButton: React.FC<Props> = ({ isLoading = false, children, ...rest }) => {
     return (
-        <button type="button" disabled={isLoading} {...rest}>
+        <button type="button" disabled={isLoading} aria-label="submitting form" {...rest}>
             {isLoading ? <commonIcon.loader className="animate-spin mx-auto" /> : children}
         </button>
     );

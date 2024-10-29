@@ -122,6 +122,7 @@ const loginConfig = {
         {
             label: 'Пользователь',
             input: {
+                name: 'username',
                 type: 'text' as const,
                 icon: 'user',
             },
@@ -129,6 +130,7 @@ const loginConfig = {
         {
             label: 'Пароль',
             input: {
+                name: 'password',
                 type: 'password' as const,
                 icon: 'eye',
             },
