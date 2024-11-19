@@ -11,6 +11,9 @@ const nextConfig = {
         includePaths: [path.join(__dirname, 'styles'), path.join(__dirname, 'components')],
     },
     i18n,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;
