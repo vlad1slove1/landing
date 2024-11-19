@@ -1,0 +1,32 @@
+@import '@/styles/styles';
+@import '@/styles/variables';
+
+.navbar {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.link {
+    @include responsive(large) {
+        @include fontStyles($font-montserrat, 20px, 500, $color-white);
+    }
+
+    @include responsive(medium) {
+        @include fontStyles($font-montserrat, 20px, 500, $color-white);
+    }
+
+    @include responsive(tablet) {
+        @include fontStyles($font-montserrat, 18px, 500, $color-white);
+    }
+
+    @include responsive(mobile) {
+        @include fontStyles($font-montserrat, 16px, 500, $color-white);
+    }
+
+    &:hover {
+        color: $color-secondary !important;
+    }
+}

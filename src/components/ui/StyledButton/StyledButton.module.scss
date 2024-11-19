@@ -1,0 +1,93 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.styledButton {
+    @include responsive(large) {
+        width: 376px;
+        height: 56px;
+    }
+
+    @include responsive(medium) {
+        width: 320px;
+        height: 45px;
+    }
+
+    @include responsive(tablet) {
+        width: 270px;
+        height: 45px;
+    }
+
+    @include responsive(mobile) {
+        width: 250px;
+        height: 40px;
+    }
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background: $color-primary;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .iconWrapper {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-secondary;
+        border-radius: 40px;
+
+        @include responsive(large) {
+            width: 116px;
+            height: 34px;
+        }
+
+        @include responsive(medium) {
+            width: 100px;
+            height: 28px;
+        }
+
+        @include responsive(tablet) {
+            width: 90px;
+            height: 25px;
+        }
+
+        @include responsive(mobile) {
+            width: 80px;
+            height: 25px;
+        }
+    }
+
+    .label {
+        margin-left: 4rem;
+
+        @include responsive(large) {
+            @include fontStyles($font-montserrat, 20px, 500, $color-white);
+        }
+
+        @include responsive(medium) {
+            @include fontStyles($font-montserrat, 18px, 500, $color-white);
+        }
+
+        @include responsive(tablet) {
+            @include fontStyles($font-montserrat, 16px, 500, $color-white);
+        }
+
+        @include responsive(mobile) {
+            @include fontStyles($font-montserrat, 14px, 500, $color-white);
+        }
+    }
+}

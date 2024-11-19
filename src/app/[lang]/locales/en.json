@@ -1,0 +1,20 @@
+{
+    "header": {
+        "navbar": {
+            "about": "About",
+            "products": "Platforms and products",
+            "contacts": "Contact us"
+        }
+    },
+    "sections": {
+        "general": {
+            "h11": "Unlimited Performance",
+            "h12": "business processes",
+            "p1": "We offer ready-made software solutions, and also create individual information products for business automation and gaining a competitive advantage",
+            "h21": "We make the complex simple,",
+            "h22": "the incomprehensible clear,",
+            "h23": "the slow fast",
+            "button": "Get a consultation"
+        }
+    }
+}

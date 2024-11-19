@@ -1,0 +1,193 @@
+@import '@/styles/styles';
+@import '@/styles/variables';
+
+.bg {
+    background-color: $color-bg-1;
+}
+
+.section {
+    @extend .container;
+
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 72px);
+}
+
+.topContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.logo {
+    @include responsive(large) {
+        @include fontStyles($font-unbounded, 71px, 800, $color-white);
+        margin-top: 1.2rem;
+    }
+
+    @include responsive(medium) {
+        @include fontStyles($font-unbounded, 50px, 800, $color-white);
+        margin-top: 0.5rem !important;
+    }
+
+    @include responsive(tablet) {
+        @include fontStyles($font-unbounded, 40px, 800, $color-white);
+    }
+
+    @include responsive(mobile) {
+        @include fontStyles($font-unbounded, 32px, 800, $color-white);
+        display: none;
+    }
+}
+
+.h1 {
+    display: flex;
+
+    @include responsive(large) {
+        @include fontStyles($font-unbounded, 5cqw, 800, $color-white);
+    }
+
+    @include responsive(medium) {
+        @include fontStyles($font-unbounded, 50px, 800, $color-white);
+    }
+
+    @include responsive(tablet) {
+        @include fontStyles($font-unbounded, 40px, 800, $color-white);
+    }
+
+    @include responsive(mobile) {
+        @include fontStyles($font-unbounded, 32px, 800, $color-white);
+        margin-top: 2rem;
+    }
+}
+
+.p1 {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-top: 4rem;
+    z-index: 4;
+
+    @include responsive(large) {
+        @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+        width: 400px;
+    }
+
+    @include responsive(medium) {
+        @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+        width: 350px;
+    }
+
+    @include responsive(tablet) {
+        @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+        width: 350px;
+    }
+
+    @include responsive(mobile) {
+        @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+        margin-top: 2.5rem;
+        margin-left: 4rem;
+    }
+}
+
+.h2 {
+    margin-top: 3rem;
+    z-index: 4;
+
+    @include responsive(large) {
+        @include fontStyles($font-unbounded, 55px, 400, $color-foreground);
+    }
+
+    @include responsive(medium) {
+        @include fontStyles($font-unbounded, 40px, 400, $color-foreground);
+    }
+
+    @include responsive(tablet) {
+        @include fontStyles($font-unbounded, 30px, 400, $color-foreground);
+    }
+
+    @include responsive(mobile) {
+        @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+        margin-top: 3rem;
+    }
+}
+
+.button {
+    display: flex;
+    align-self: end;
+    z-index: 4;
+
+    @include responsive(medium) {
+        margin-top: 2rem;
+    }
+
+    @include responsive(tablet) {
+        margin-top: 2rem;
+    }
+
+    @include responsive(mobile) {
+        align-self: center !important;
+        margin-top: 4rem;
+    }
+}
+
+.bg1 {
+    position: absolute;
+    z-index: 3;
+
+    @include responsive(large) {
+        left: 0;
+        bottom: 0;
+        width: 1400px;
+    }
+
+    @include responsive(medium) {
+        left: 0;
+        bottom: 0;
+        height: 600px;
+    }
+
+    @include responsive(tablet) {
+        left: 0;
+        bottom: 0;
+        height: 600px;
+    }
+
+    @include responsive(mobile) {
+        transform: translateY(-10px);
+        left: 0;
+        bottom: 0;
+        width: 500px;
+        height: 600px;
+    }
+}
+
+.bg2 {
+    position: absolute;
+    z-index: 2;
+
+    @include responsive(large) {
+        right: 0;
+        bottom: 0;
+        width: 1050px;
+    }
+
+    @include responsive(medium) {
+        right: 0;
+        bottom: 0;
+        height: 700px;
+    }
+
+    @include responsive(tablet) {
+        right: 0;
+        bottom: 0;
+    }
+
+    @include responsive(mobile) {
+        right: 0;
+        bottom: 0;
+        width: 500px;
+        height: 950px;
+    }
+}

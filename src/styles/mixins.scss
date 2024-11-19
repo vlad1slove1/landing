@@ -1,0 +1,38 @@
+@import 'variables';
+
+@mixin responsive($size) {
+    @if $size == large {
+        @media only screen and (min-width: #{$breakpoint-large}px) {
+            @content;
+        }
+    }
+    @else if $size == medium {
+        @media only screen and (min-width: #{$breakpoint-tablet + 1}px) and (max-width: #{$breakpoint-large}px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media only screen and (min-width: #{$breakpoint-mobile + 1}px) and (max-width: #{$breakpoint-tablet}px) {
+            @content;
+        }
+    }
+    @else if $size == mobile {
+        @media only screen and (max-width: #{$breakpoint-tablet - 1}px) {
+            @content;
+        }
+    }
+}
+
+@mixin fontStyles($font, $size, $weight, $color, $spacing: 0) {
+    font-family: $font !important;
+    font-size: $size !important;
+    font-weight: $weight !important;
+    color: $color !important;
+    letter-spacing: $spacing !important;
+}
+
+@mixin fullHeight() {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

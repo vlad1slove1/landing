@@ -1,11 +1,11 @@
-import { Fira_Code as FontMono, Inter as FontSans } from 'next/font/google';
+import { Montserrat, Unbounded } from 'next/font/google';
 
-export const fontSans = FontSans({
-    subsets: ['latin'],
-    variable: '--font-sans',
+export const fontMontserrat = Montserrat({
+    subsets: ['cyrillic', 'latin'],
+    variable: '--font-montserrat',
 });
 
-export const fontMono = FontMono({
-    subsets: ['latin'],
-    variable: '--font-mono',
+export const fontUnbounded = Unbounded({
+    subsets: ['cyrillic', 'latin'],
+    variable: '--font-unbounded',
 });

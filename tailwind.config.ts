@@ -11,56 +11,17 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                default: '#262626',
-                focus: '#388cfa',
-                primary: '#a1be95',
-                secondary: '#f98866',
-                danger: '#b41c2b',
-                success: '#009f42',
-                warning: '#f0ad4e',
-            },
-            transitionProperty: {
-                height: 'height',
+                default: '#ffffff',
+                primary: '#4A8EA0',
+                secondary: '#CAE7EF',
+                danger: '#FF5842',
+                success: '#41C14E',
+                warning: '#F2D026',
             },
         },
     },
     darkMode: 'class',
-    plugins: [
-        nextui({
-            themes: {
-                light: {
-                    colors: {
-                        background: '#ffffff',
-                        foreground: '#262526',
-                        focus: '#388cfa',
-                        content1: '#e1e1e1',
-                        content2: '#f0f0f0',
-                        content3: '#8d8d93ff',
-                        primary: '#a1be95',
-                        secondary: '#f98866',
-                        danger: '#b41c2b',
-                        success: '#009f42',
-                        warning: '#f0ad4e',
-                    },
-                },
-                dark: {
-                    colors: {
-                        background: '#3f4742',
-                        foreground: '#ffffff',
-                        focus: '#388cfa',
-                        content1: '#59665e',
-                        content2: '#627168',
-                        content3: '#282c28',
-                        primary: '#a1be95',
-                        secondary: '#f98866',
-                        danger: '#b41c2b',
-                        success: '#009f42',
-                        warning: '#f0ad4e',
-                    },
-                },
-            },
-        }),
-    ],
+    plugins: [nextui()],
 };
 
 export default config;

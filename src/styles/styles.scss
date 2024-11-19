@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+    @include responsive(large) {
+        margin: 0 120px;
+    }
+
+    @include responsive(medium) {
+        margin: 0 60px;
+    }
+
+    @include responsive(tablet) {
+        margin: 0 30px;
+    }
+
+    @include responsive(mobile) {
+        margin: 0 20px;
+    }
+}
