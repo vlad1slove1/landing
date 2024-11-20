@@ -36,10 +36,9 @@ const GeneralSection: React.FC<LangParams> = async ({ lang }) => {
                 </h1>
 
                 <StyledButton label={t?.sections.general.button} className={styles.button} />
-
-                <Image src={ellipse1} alt="white ellipse" priority className={styles.bg1} />
-                <Image src={ellipse2} alt="light blue ellipse" priority className={styles.bg2} />
             </div>
+            <Image alt="White ellipse" src={ellipse1} priority className={styles.bg1} />
+            <Image alt="Light-blue ellipse" src={ellipse2} priority className={styles.bg2} />
         </div>
     );
 };
