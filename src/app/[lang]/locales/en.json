@@ -15,6 +15,22 @@
             "h22": "the incomprehensible clear,",
             "h23": "the slow fast",
             "button": "Get a consultation"
+        },
+        "about": {
+            "h1": "A team of experts with experience in implementing international projects",
+            "cards": {
+                "c1hdr": "high-load applications",
+                "c1bdy": "15",
+                "c1sub": "+",
+
+                "c2hdr": "specialize in logistics and agribusiness",
+                "c2bdy": "20",
+                "c2sub": "years",
+
+                "c3hdr": "successfully solve business challenges and implement IT projects",
+                "c3bdy": "30",
+                "c3sub": "years"
+            }
         }
     }
 }

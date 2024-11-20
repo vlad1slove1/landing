@@ -1,5 +1,5 @@
 import React from 'react';
-import siteConfig from '@/config/siteConfig';
+import { navItems } from '@/config/siteConfig';
 import { Link } from '@nextui-org/link';
 import { Path } from '@/lib/enums';
 import useLocale from '@/hooks/useLocale';
@@ -12,7 +12,7 @@ const Navbar: React.FC<LangParams> = ({ lang }) => {
     const t = useLocale(lang);
     return (
         <div className={styles.navbar}>
-            {siteConfig.header.navItems.map(({ key }, idx) => (
+            {navItems.map(({ key }, idx) => (
                 <Link
                     key={`navItem_${key}_${idx}`}
                     href={`${Path.HOME}#${key}`}

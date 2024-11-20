@@ -1,5 +1,6 @@
 // COLORS
 $color-bg-1: #336D80;
+$color-bg-2: #D8EDF3;
 
 $color-white: #FFFFFF;
 $color-foreground: #033141;
@@ -15,3 +16,15 @@ $font-unbounded: var(--font-unbounded);
 $breakpoint-large: 1440;
 $breakpoint-tablet: 768;
 $breakpoint-mobile: 425;
+
+// MAPS
+$map-for-directions: (
+    "top": to top,
+    "top-right": to top right,
+    "right": to right,
+    "bottom-right": to bottom right,
+    "bottom": to bottom,
+    "bottom-left": to bottom left,
+    "left": to left,
+    "top-left": to top left,
+) !default;

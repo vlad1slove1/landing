@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Navbar from '@/components/ui/header/navbar/Navbar';
-import LanguageSelector from '@/components/ui/header/langSwitch/LanguageSelector';
+import LanguageSelector from '@/components/ui/header/languageSelector/LanguageSelector';
 import MobileMenu from '@/components/mobile/mobileMenu/MobileMenu';
-import siteConfig from '@/config/siteConfig';
+import { navItems } from '@/config/siteConfig';
 import { MOBILE_WIDTH_BREAKPOINT } from '@/lib/constants';
 import useDeviceWidth from '@/hooks/useDeviceWidth';
 import { Logo } from '@/components/icon/Icons';
@@ -26,7 +26,7 @@ const Header: React.FC<LangParams> = ({ lang }) => {
                         </Link>
                         <div className={styles.container}>
                             <LanguageSelector lang={lang} />
-                            <MobileMenu items={siteConfig.header.navItems} lang={lang} />
+                            <MobileMenu items={navItems} lang={lang} />
                         </div>
                     </>
                 ) : (

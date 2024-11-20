@@ -1,7 +1,9 @@
 import React from 'react';
 import getLocale from '@/app/[lang]/locales';
+import { Link } from '@nextui-org/link';
+import { Path } from '@/lib/enums';
 import { Logo } from '@/components/icon/Icons';
-import StyledButton from '@/components/ui/StyledButton/StyledButton';
+import StyledButton from '@/components/ui/styledButton/StyledButton';
 import Image from 'next/image';
 import ellipse1 from '@/public/ellipse1.svg';
 import ellipse2 from '@/public/ellipse2.svg';
@@ -16,7 +18,9 @@ const GeneralSection: React.FC<LangParams> = async ({ lang }) => {
         <div className={styles.bg}>
             <div className={styles.section}>
                 <div className={styles.topContent}>
-                    <Logo className={styles.logo} />
+                    <Link href={Path.HOME}>
+                        <Logo className={styles.logo} />
+                    </Link>
 
                     <h1 className={styles.h1}>
                         {t.sections.general.h11}

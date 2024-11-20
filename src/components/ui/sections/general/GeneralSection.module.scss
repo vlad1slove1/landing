@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     background-color: $color-bg-1;
+    @include linear-gradient(bottom-right, ($color-bg-1 50%, $color-bg-2));
 }
 
 .section {
@@ -23,15 +24,6 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 2rem;
-
-    @include responsive(medium) {
-    }
-
-    @include responsive(tablet) {
-    }
-
-    @include responsive(mobile) {
-    }
 }
 
 .logo {
@@ -41,9 +33,6 @@
 
     @include responsive(medium) {
         margin-top: 0.5rem !important;
-    }
-
-    @include responsive(tablet) {
     }
 
     @include responsive(mobile) {
