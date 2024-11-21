@@ -22,22 +22,12 @@ const GeneralSection: React.FC<LangParams> = async ({ lang }) => {
                         <Logo className={styles.logo} />
                     </Link>
 
-                    <h1 className={styles.h1}>
-                        {t.sections.general.h11}
-                        <br />
-                        {t.sections.general.h12}
-                    </h1>
+                    <h1 className={styles.h1}>{t.sections.general.h1}</h1>
                 </div>
 
                 <p className={styles.p1}>{t.sections.general.p1}</p>
 
-                <h1 className={styles.h2}>
-                    {t.sections.general.h21}
-                    <br />
-                    {t.sections.general.h22}
-                    <br />
-                    {t.sections.general.h23}
-                </h1>
+                <h1 className={styles.h2}>{t.sections.general.h2}</h1>
 
                 <StyledButton label={t?.sections.general.button} className={styles.button} />
             </div>

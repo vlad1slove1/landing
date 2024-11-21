@@ -1,5 +1,5 @@
 import React from 'react';
-import { navItems } from '@/config/siteConfig';
+import { navItems } from '@/config/config';
 import { Link } from '@nextui-org/link';
 import { Path } from '@/lib/enums';
 import useLocale from '@/hooks/useLocale';

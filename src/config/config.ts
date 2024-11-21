@@ -7,9 +7,7 @@ export const languages = [
     { label: 'English', href: '/en', key: 'en' },
 ];
 
-const siteConfig = {
+export const config = {
     name: 'UP-BP',
     description: 'Unlimited Performance Business Processes',
 };
-
-export default siteConfig;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { languages } from '@/config/siteConfig';
+import { languages } from '@/config/config';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/dropdown';
 import { commonIcon } from '@/components/icon/Icons';
 import { Button } from '@nextui-org/button';

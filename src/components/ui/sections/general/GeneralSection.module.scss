@@ -24,6 +24,10 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 2rem;
+
+    @include responsive(mobile) {
+        gap: 0;
+    }
 }
 
 .logo {
@@ -69,19 +73,19 @@
     z-index: 4;
 
     @include responsive(large) {
-        @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
-        width: 450px;
+        @include fontStyles($font-montserrat, 18px, 500, $color-foreground);
+        width: 32%;
     }
 
     @include responsive(medium) {
         @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
-        width: 450px;
-        margin-top: 5rem;
+        width: 400px;
+        margin-top: 2rem;
     }
 
     @include responsive(tablet) {
         @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
-        width: 350px;
+        width: 400px;
         margin-top: 2rem;
     }
 
@@ -101,11 +105,13 @@
 
     @include responsive(large) {
         @include fontStyles($font-unbounded, 55px, 400, $color-foreground);
+        width: 60%;
     }
 
     @include responsive(medium) {
         @include fontStyles($font-unbounded, 40px, 400, $color-foreground);
-        margin-top: 5rem;
+        width: 60%;
+        margin-top: 3rem;
     }
 
     @include responsive(tablet) {
@@ -113,7 +119,7 @@
     }
 
     @include responsive(mobile) {
-        @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+        @include fontStyles($font-unbounded, 16px, 400, $color-foreground);
         margin-top: 3rem;
     }
 }
@@ -129,7 +135,7 @@
     }
 
     @include responsive(medium) {
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 4.4rem;
     }
 

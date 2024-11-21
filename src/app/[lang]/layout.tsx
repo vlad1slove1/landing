@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Providers from '@/app/[lang]/providers';
 import Footer from '@/components/Footer';
 import Header from '@/components/ui/header/Header';
-import siteConfig from '@/config/siteConfig';
+import { config } from '@/config/config';
 import clsx from 'clsx';
 import MainContainer from '@/components/MainContainer';
 
@@ -18,10 +18,10 @@ export type LangParams = {
 
 export const metadata: Metadata = {
     title: {
-        default: siteConfig.name,
-        template: `%s - ${siteConfig.name}`,
+        default: config.name,
+        template: `%s - ${config.name}`,
     },
-    description: siteConfig.description,
+    description: config.description,
     icons: {
         icon: '/favicon.ico',
     },

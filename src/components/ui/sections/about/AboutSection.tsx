@@ -16,27 +16,27 @@ const AboutSection: React.FC<LangParams> = async ({ lang }) => {
                     <h1>{t?.sections.about.h1}</h1>
                 </div>
                 <div className={styles.cards}>
-                    <div className="flex flex-col gap-4 lg:gap-0 md:gap-0 lg:flex-row md:flex-row justify-between w-full">
+                    <div className={styles.firstRow}>
                         <Card className={styles.card}>
                             <CardHeader className={styles.cHead}>
-                                <p>{t.sections.about.cards.c1hdr}</p>
+                                <p>{t.sections.about.cards.c1.header}</p>
                             </CardHeader>
                             <CardBody className={styles.cBody}>
                                 <div className={styles.cContainer}>
-                                    <h2>{t.sections.about.cards.c1bdy}</h2>
-                                    <h3>{t.sections.about.cards.c1sub}</h3>
+                                    <h2>{t.sections.about.cards.c1.main}</h2>
+                                    <h3>{t.sections.about.cards.c1.sub}</h3>
                                 </div>
                             </CardBody>
                         </Card>
 
                         <Card className={clsx(styles.card, 'z-10')}>
                             <CardHeader className={styles.cHead}>
-                                <p>{t.sections.about.cards.c2hdr}</p>
+                                <p>{t.sections.about.cards.c2.header}</p>
                             </CardHeader>
                             <CardBody className={styles.cBody}>
                                 <div className={styles.cContainer}>
-                                    <h2>{t.sections.about.cards.c2bdy}</h2>
-                                    <h3>{t.sections.about.cards.c2sub}</h3>
+                                    <h2>{t.sections.about.cards.c2.main}</h2>
+                                    <h3>{t.sections.about.cards.c2.sub}</h3>
                                 </div>
                             </CardBody>
                         </Card>
@@ -46,12 +46,12 @@ const AboutSection: React.FC<LangParams> = async ({ lang }) => {
                         <Card className={clsx(styles.card, 'z-10')}>
                             <CardBody className={styles.cBody}>
                                 <div className={styles.cContainer}>
-                                    <h2>{t.sections.about.cards.c3bdy}</h2>
-                                    <h3>{t.sections.about.cards.c3sub}</h3>
+                                    <h2>{t.sections.about.cards.c3.main}</h2>
+                                    <h3>{t.sections.about.cards.c3.sub}</h3>
                                 </div>
                             </CardBody>
                             <CardFooter className={styles.cFoot}>
-                                <p>{t.sections.about.cards.c3hdr}</p>
+                                <p>{t.sections.about.cards.c3.header}</p>
                             </CardFooter>
                         </Card>
                     </div>
