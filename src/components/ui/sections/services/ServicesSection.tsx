@@ -1,11 +1,11 @@
 import React from 'react';
 import getLocale from '@/app/[lang]/locales';
 import Image from 'next/image';
+import StyledButton from '@/components/ui/styledButton/StyledButton';
 
 import type { LangParams } from '@/app/[lang]/layout';
 
 import styles from './ServicesSection.module.scss';
-import StyledButton from '@/components/ui/styledButton/StyledButton';
 
 type Service = {
     label: string;

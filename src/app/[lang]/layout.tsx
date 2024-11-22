@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     },
     description: config.description,
     icons: {
-        icon: '/favicon.ico',
+        icon: 'icon.ico',
     },
 };
 

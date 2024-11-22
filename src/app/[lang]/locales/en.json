@@ -65,6 +65,45 @@
                 "li5": "integration with external equipment",
                 "li6": "integration with Telegram"
             }
+        },
+
+        "products": {
+            "label": "We Offer",
+            "description": "Platforms and Products",
+            "products": {
+                "pr1": {
+                    "label": "Technologies",
+                    "li1": "PostgreSQL",
+                    "li2": "Java",
+                    "li3": "Kotlin",
+                    "li4": "React",
+                    "li5": "JavaScript",
+                    "li6": "TypeScript"
+                },
+
+                "pr2": {
+                    "label": "BI (Business Intelligence Tools)",
+                    "li1": "Installation",
+                    "li2": "Configuration",
+                    "li3": "Integration"
+                },
+
+                "pr3": {
+                    "label": "Custom Development",
+                    "li1": "TMS",
+                    "li2": "WMS",
+                    "li3": "ERP",
+                    "li4": "Exchange",
+                    "li5": "Geolocation"
+                },
+
+                "pr4": {
+                    "label": "Flexible Integration",
+                    "li1": "Open API",
+                    "li2": "ATI.su",
+                    "li3": "Kontur.EDI"
+                }
+            }
         }
     }
 }
