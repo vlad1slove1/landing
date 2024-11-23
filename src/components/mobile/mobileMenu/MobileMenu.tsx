@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import MobileMenuToggle from '../mobileMenuToggle/MobileMenuToggle';
 import { NavItem } from '@/types/navItem';
@@ -7,20 +5,20 @@ import { Link } from '@nextui-org/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MOBILE_WIDTH_BREAKPOINT } from '@/lib/constants';
 import { Path } from '@/lib/enums';
-import useLocale from '@/hooks/useLocale';
+import useClientLocale from '@/hooks/useClientLocale';
+
 import useDeviceWidth from '@/hooks/useDeviceWidth';
 
 import styles from './MobileMenu.module.scss';
 
 type Props = {
     items: NavItem[];
-    lang: string;
 };
 
-const MobileMenu: React.FC<Props> = ({ items, lang }) => {
+const MobileMenu: React.FC<Props> = ({ items }) => {
     const [isOpen, setIsOpen] = useState(false);
     const isMobile = useDeviceWidth(MOBILE_WIDTH_BREAKPOINT);
-    const t = useLocale(lang);
+    const { translations } = useClientLocale();
 
     const handleOpenMenu = () => {
         setIsOpen(!isOpen);
@@ -49,7 +47,7 @@ const MobileMenu: React.FC<Props> = ({ items, lang }) => {
                                             onClick={() => setIsOpen(false)}
                                             className={styles.mobileNavLink}
                                         >
-                                            {t?.header.navbar[key]}
+                                            {translations.header?.navbar[key]}
                                         </Link>
                                     </div>
                                 ))}

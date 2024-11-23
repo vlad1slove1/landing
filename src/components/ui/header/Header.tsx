@@ -10,11 +10,9 @@ import useDeviceWidth from '@/hooks/useDeviceWidth';
 import { Logo } from '@/components/icon/Icons';
 import { Link } from '@nextui-org/link';
 
-import type { LangParams } from '@/app/[lang]/layout';
-
 import styles from './Header.module.scss';
 
-const Header: React.FC<LangParams> = ({ lang }) => {
+const Header: React.FC = () => {
     const isMobile = useDeviceWidth(MOBILE_WIDTH_BREAKPOINT);
     return (
         <header className={styles.header}>
@@ -25,14 +23,14 @@ const Header: React.FC<LangParams> = ({ lang }) => {
                             <Logo className={styles.logo} />
                         </Link>
                         <div className={styles.container}>
-                            <LanguageSelector lang={lang} />
-                            <MobileMenu items={navItems} lang={lang} />
+                            <LanguageSelector />
+                            <MobileMenu items={navItems} />
                         </div>
                     </>
                 ) : (
                     <>
-                        <Navbar lang={lang} />
-                        <LanguageSelector lang={lang} />
+                        <Navbar />
+                        <LanguageSelector />
                     </>
                 )}
             </div>

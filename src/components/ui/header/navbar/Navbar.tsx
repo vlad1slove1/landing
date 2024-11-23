@@ -2,14 +2,12 @@ import React from 'react';
 import { navItems } from '@/config/config';
 import { Link } from '@nextui-org/link';
 import { Path } from '@/lib/enums';
-import useLocale from '@/hooks/useLocale';
-
-import type { LangParams } from '@/app/[lang]/layout';
+import useClientLocale from '@/hooks/useClientLocale';
 
 import styles from './Navbar.module.scss';
 
-const Navbar: React.FC<LangParams> = ({ lang }) => {
-    const t = useLocale(lang);
+const Navbar: React.FC = () => {
+    const { translations } = useClientLocale();
     return (
         <div className={styles.navbar}>
             {navItems.map(({ key }, idx) => (
@@ -18,7 +16,7 @@ const Navbar: React.FC<LangParams> = ({ lang }) => {
                     href={`${Path.HOME}#${key}`}
                     className={styles.link}
                 >
-                    {t?.header.navbar[key]}
+                    {translations.header?.navbar[key]}
                 </Link>
             ))}
         </div>

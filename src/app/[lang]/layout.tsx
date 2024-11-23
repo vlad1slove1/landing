@@ -41,8 +41,8 @@ export default function RootLayout({
     return (
         <html lang={params.lang} suppressHydrationWarning>
             <body className={clsx('antialiased', fontMontserrat.variable, fontUnbounded.variable)}>
-                <Providers>
-                    <Header lang={params.lang} />
+                <Providers params={params}>
+                    <Header />
                     <MainContainer children={children} />
                     <Footer />
                 </Providers>
