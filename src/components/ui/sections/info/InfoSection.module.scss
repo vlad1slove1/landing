@@ -1,0 +1,144 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.main {
+    position: relative;
+    @extend .container;
+
+    .container {
+        position: relative;
+        display: flex;
+        margin: 5rem 0;
+
+        @include responsive(medium) {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @include responsive(tablet) {
+            margin-bottom: 1rem;
+        }
+
+        @include responsive(mobile) {
+            margin: 1rem 0;
+        }
+
+        .backgroundLabel {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 25cqw, 800, rgba($color-bg-2, 0.4));
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 25cqw, 800, rgba($color-bg-2, 0.4));
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 27cqw, 800, rgba($color-bg-2, 0.4));
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 30cqw, 800, rgba($color-bg-2, 0.4));
+                margin-left: 1rem;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        .flexContainer {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            flex-grow: 1;
+
+            @include responsive(tablet) {
+                flex-direction: column;
+            }
+
+            @include responsive(mobile) {
+                flex-direction: column;
+            }
+
+            ul {
+                list-style-type: circle;
+                flex-basis: 95%;
+
+                li {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            .paragraphs {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 2rem;
+
+                p {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 30px, 400, $color-foreground);
+                        width: 83%;
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 26px, 400, $color-foreground);
+                        width: 95%;
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 16px, 400, $color-foreground);
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        display: flex;
+        align-items: end;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+        margin-left: auto !important;
+
+        @include responsive(medium) {
+            margin-top: 1rem;
+        }
+
+        @include responsive(tablet) {
+            margin-top: 0;
+        }
+
+        @include responsive(mobile) {
+            width: 90%;
+            margin-top: 0;
+        }
+    }
+}

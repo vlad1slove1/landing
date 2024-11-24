@@ -2,6 +2,7 @@ export type Content = {
     header: {
         navbar: Record<string, string>;
     };
+
     sections: {
         general: {
             h1: string;
@@ -9,10 +10,12 @@ export type Content = {
             h2: string;
             button: string;
         };
+
         about: {
             h1: string;
             cards: Record<string, { header: string; main: string; sub: string }>;
         };
+
         services: Record<
             string,
             {
@@ -20,6 +23,7 @@ export type Content = {
                 items: string[];
             }
         >;
+
         products: {
             label: string;
             description: string;
@@ -30,6 +34,14 @@ export type Content = {
                     items: string[];
                 }
             >;
+        };
+
+        info: {
+            label: string;
+            backgroundLabel: string;
+            paragraphs: {
+                [key: string]: string;
+            };
         };
     };
 };

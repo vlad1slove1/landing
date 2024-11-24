@@ -104,6 +104,16 @@
                     "li3": "Kontur.EDI"
                 }
             }
+        },
+
+        "info": {
+            "label": "About the developer",
+            "backgroundLabel": "UPBP",
+            "paragraphs": {
+                "li1": "A team of experts with deep knowledge and practical skills in specialized fields",
+                "li2": "Each proposed solution is based on successful experience in a rapidly changing environment, where it is essential not only to have theoretical knowledge but also the ability to adapt to new challenges, find effective solutions, and take a comprehensive approach to problem-solving"
+            }
         }
+
     }
 }
