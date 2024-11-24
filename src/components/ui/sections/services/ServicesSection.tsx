@@ -1,5 +1,5 @@
 import React from 'react';
-import getLocale from '@/app/[lang]/locales';
+import getLocale from '@/app/[lang]/getLocale';
 import Image from 'next/image';
 import StyledButton from '@/components/ui/styledButton/StyledButton';
 
@@ -19,7 +19,9 @@ const ServicesSection: React.FC<LangParams> = async ({ lang }) => {
         <div className={styles.container}>
             <table className={styles.table}>
                 <tbody>
-                    {services.map(([key, service]) => renderService(key, service as Service))}
+                    {services.map(([key, service]) =>
+                        renderService(key, service as unknown as Service)
+                    )}
                 </tbody>
             </table>
             <StyledButton label={t.sections.general.button} className={styles.button} />

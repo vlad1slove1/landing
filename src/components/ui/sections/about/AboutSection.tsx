@@ -1,5 +1,5 @@
 import React from 'react';
-import getLocale from '@/app/[lang]/locales';
+import getLocale from '@/app/[lang]/getLocale';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import clsx from 'clsx';
 
@@ -13,7 +13,7 @@ const AboutSection: React.FC<LangParams> = async ({ lang }) => {
         <div className={styles.bg}>
             <div className={styles.section}>
                 <div className={styles.topContent}>
-                    <h1>{t?.sections.about.h1}</h1>
+                    <h1>{t.sections.about.h1}</h1>
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.firstRow}>

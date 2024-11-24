@@ -1,5 +1,5 @@
 import React from 'react';
-import getLocale from '@/app/[lang]/locales';
+import getLocale from '@/app/[lang]/getLocale';
 import { Link } from '@nextui-org/link';
 import { Path } from '@/lib/enums';
 import { Logo } from '@/components/icon/Icons';
@@ -29,7 +29,7 @@ const GeneralSection: React.FC<LangParams> = async ({ lang }) => {
 
                 <h1 className={styles.h2}>{t.sections.general.h2}</h1>
 
-                <StyledButton label={t?.sections.general.button} className={styles.button} />
+                <StyledButton label={t.sections.general.button} className={styles.button} />
             </div>
             <Image alt="White ellipse" src={ellipse1} priority={false} className={styles.bg1} />
             <Image

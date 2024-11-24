@@ -6,6 +6,7 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [ "@typescript-eslint" ],
   "extends": [
+    "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended"

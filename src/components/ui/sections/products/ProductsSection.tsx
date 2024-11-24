@@ -1,5 +1,5 @@
 import React from 'react';
-import getLocale from '@/app/[lang]/locales';
+import getLocale from '@/app/[lang]/getLocale';
 import Image from 'next/image';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Chip } from '@nextui-org/chip';
@@ -25,7 +25,9 @@ const ProductsSection: React.FC<LangParams> = async ({ lang }) => {
                 <h1>{t.sections.products.description}</h1>
             </div>
             <div className={styles.cards}>
-                {products.map(([key, product]) => renderProduct(key, product as Product))}
+                {products.map(([key, product]) =>
+                    renderProduct(key, product as unknown as Product)
+                )}
             </div>
         </div>
     );
