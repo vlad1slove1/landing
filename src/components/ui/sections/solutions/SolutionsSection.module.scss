@@ -1,0 +1,254 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+
+    @extend .container;
+
+    .topContent {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        vertical-align: middle;
+
+        @include responsive(large) {
+            margin: 5rem 0;
+        }
+
+        @include responsive(medium) {
+            margin: 2.5rem 0;
+        }
+
+        @include responsive(tablet) {
+            margin: 2rem 0;
+        }
+
+        @include responsive(mobile) {
+            position: relative;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        ul {
+            list-style-type: circle;
+
+            li {
+                @include responsive(large) {
+                    @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 40px, 700, $color-foreground);
+                top: 3rem;
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 36px, 400, $color-foreground);
+                top: 2.5rem;
+                left: 55%;
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+                top: 1.8rem;
+                left: 60%;
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 2rem 0;
+
+        .card:nth-child(odd) {
+            background-color: $color-bg-1;
+
+            .cardFooter p {
+                @include set-dynamic-text-color($color-bg-1);
+            }
+        }
+
+        .card:nth-child(even) {
+            background-color: $color-foreground;
+
+            .cardFooter p {
+                @include set-dynamic-text-color($color-foreground);
+            }
+        }
+
+        .card {
+            position: relative;
+            flex-grow: 1;
+            overflow: hidden;
+
+            @include responsive(large) {
+                flex-basis: 35%;
+            }
+
+            @include responsive(medium) {
+                flex-basis: 35%;
+            }
+
+            .cardHeader {
+                position: relative;
+                display: flex;
+                padding: 2rem;
+
+                @include responsive(mobile) {
+                    padding: 1rem;
+                }
+
+                h1 {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 40px, 700, $color-white);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 36px, 700, $color-white);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 24px, 700, $color-white);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 18px, 700, $color-white);
+                    }
+                }
+            }
+
+            .cardBody {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 2rem;
+
+                @include responsive(mobile) {
+                    padding: 1rem;
+                }
+
+                p {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 8cqw, 400, $color-white);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 7cqw, 400, $color-white);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 10cqw, 400, $color-white);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 15cqw, 400, $color-white);
+                    }
+                }
+            }
+
+            .cardFooter {
+                position: relative;
+                display: flex;
+                padding: 2rem;
+
+                @include responsive(mobile) {
+                    padding: 1rem;
+                }
+
+                p {
+                    @include responsive(large) {
+                        @include fontStyles($font-montserrat, 20px, 700, null);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-montserrat, 20px, 700, null);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-montserrat, 20px, 700, null);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-montserrat, 12px, 700, null);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomContent {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        @include responsive(mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 2cqw, 400, $color-foreground);
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 2cqw, 400, $color-foreground);
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 2.5cqw, 400, $color-foreground);
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 4cqw, 400, $color-foreground);
+            }
+        }
+
+        .button {
+            display: flex;
+        }
+    }
+}

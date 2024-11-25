@@ -14,7 +14,7 @@ type Service = {
 
 const ServicesSection: React.FC<LangParams> = async ({ lang }) => {
     const t = await getLocale(lang);
-    const services = Object.entries(t?.sections.services ?? {});
+    const services = Object.entries(t.sections.services ?? {});
     return (
         <div className={styles.container}>
             <table className={styles.table}>

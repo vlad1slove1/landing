@@ -49,3 +49,11 @@
         }
     }
 }
+
+@mixin set-dynamic-text-color($bg-color) {
+    $text-color: map-get($bg-to-text-color, $bg-color);
+    @if $text-color == null {
+        $text-color: map-get($bg-to-text-color, default);
+    }
+    color: $text-color;
+}

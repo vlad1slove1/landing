@@ -3,6 +3,7 @@ $color-bg-1: #336D80;
 $color-bg-2: #D8EDF3;
 
 $color-white: #FFFFFF;
+$color-black: #000000;
 $color-foreground: #033141;
 
 $color-primary: #4A8EA0;
@@ -28,3 +29,11 @@ $map-for-directions: (
     "left": to left,
     "top-left": to top left,
 ) !default;
+
+$bg-to-text-color: (
+        $color-white: $color-black,
+        $color-black: $color-white,
+        $color-bg-1: $color-foreground,
+        $color-foreground: $color-primary,
+        default: $color-black
+);

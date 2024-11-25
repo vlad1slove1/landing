@@ -14,6 +14,7 @@ import styles from './GeneralSection.module.scss';
 
 const GeneralSection: React.FC<LangParams> = async ({ lang }) => {
     const t = await getLocale(lang);
+    const { h1, p1, h2, button } = t.sections.general;
     return (
         <div className={styles.bg}>
             <div className={styles.section}>
@@ -22,14 +23,14 @@ const GeneralSection: React.FC<LangParams> = async ({ lang }) => {
                         <Logo className={styles.logo} />
                     </Link>
 
-                    <h1 className={styles.h1}>{t.sections.general.h1}</h1>
+                    <h1 className={styles.h1}>{h1}</h1>
                 </div>
 
-                <p className={styles.p1}>{t.sections.general.p1}</p>
+                <p className={styles.p1}>{p1}</p>
 
-                <h1 className={styles.h2}>{t.sections.general.h2}</h1>
+                <h1 className={styles.h2}>{h2}</h1>
 
-                <StyledButton label={t.sections.general.button} className={styles.button} />
+                <StyledButton label={button} className={styles.button} />
             </div>
             <Image alt="White ellipse" src={ellipse1} priority={false} className={styles.bg1} />
             <Image

@@ -15,17 +15,17 @@ type Product = {
 
 const ProductsSection: React.FC<LangParams> = async ({ lang }) => {
     const t = await getLocale(lang);
-    const products = Object.entries(t?.sections.products.products ?? {});
+    const { label, description, products } = t.sections.products;
     return (
         <div className={styles.container}>
             <div className={styles.topContent}>
                 <ul>
-                    <li>{t.sections.products.label}</li>
+                    <li>{label}</li>
                 </ul>
-                <h1>{t.sections.products.description}</h1>
+                <h1>{description}</h1>
             </div>
             <div className={styles.cards}>
-                {products.map(([key, product]) =>
+                {Object.entries(products).map(([key, product]) =>
                     renderProduct(key, product as unknown as Product)
                 )}
             </div>

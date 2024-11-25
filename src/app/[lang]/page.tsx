@@ -1,4 +1,5 @@
 import InfoSection from '@/components/ui/sections/info/InfoSection';
+import SolutionsSection from '@/components/ui/sections/solutions/SolutionsSection';
 import React from 'react';
 import GeneralSection from '@/components/ui/sections/general/GeneralSection';
 import AboutSection from '@/components/ui/sections/about/AboutSection';
@@ -15,6 +16,7 @@ export default function Home({ params }: { params: LangParams }) {
             <ServicesSection lang={params.lang} />
             <ProductsSection lang={params.lang} />
             <InfoSection lang={params.lang} />
+            <SolutionsSection lang={params.lang} />
         </>
     );
 }

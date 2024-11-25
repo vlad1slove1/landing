@@ -113,6 +113,24 @@
                 "li1": "A team of experts with deep knowledge and practical skills in specialized fields",
                 "li2": "Each proposed solution is based on successful experience in a rapidly changing environment, where it is essential not only to have theoretical knowledge but also the ability to adapt to new challenges, find effective solutions, and take a comprehensive approach to problem-solving"
             }
+        },
+
+        "solutions": {
+            "label": "Comprehensive Solutions",
+            "description": "Be inspired by the success of our clients",
+            "motivation": "Didn't find the solution you need?",
+            "solutions": {
+                "s1": {
+                    "header": "Logistics",
+                    "main": "+ 98%",
+                    "sub": "Double annual growth in turnover and profit"
+                },
+                "s2": {
+                    "header": "Agribusiness",
+                    "main": "+ 99%",
+                    "sub": "Synchronization of all departments' operations. Double productivity of the warehouse immediately after implementation"
+                }
+            }
         }
 
     }

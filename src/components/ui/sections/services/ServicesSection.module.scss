@@ -96,11 +96,11 @@
         }
 
         @include responsive(tablet) {
-            @include fontStyles($font-montserrat, 10px, 500, $color-foreground);
+            @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
         }
 
         @include responsive(mobile) {
-            @include fontStyles($font-montserrat, 10px, 500, $color-foreground);
+            @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
         }
     }
 }

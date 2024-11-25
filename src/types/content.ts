@@ -43,5 +43,12 @@ export type Content = {
                 [key: string]: string;
             };
         };
+
+        solutions: {
+            label: string;
+            description: string;
+            motivation: string;
+            solutions: Record<string, { header: string; main: string; sub: string }>;
+        };
     };
 };

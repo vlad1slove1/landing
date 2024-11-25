@@ -21,7 +21,7 @@ const InfoSection: React.FC<LangParams> = async ({ lang }) => {
                     </ul>
                     <div className={styles.paragraphs}>
                         {Object.values(paragraphs).map((paragraph) => (
-                            <p>{paragraph}</p>
+                            <p key={paragraph}>{paragraph}</p>
                         ))}
                     </div>
                 </div>
