@@ -50,5 +50,16 @@ export type Content = {
             motivation: string;
             solutions: Record<string, { header: string; main: string; sub: string }>;
         };
+
+        modular: {
+            label: string;
+            solutions: Record<
+                string,
+                {
+                    main: string;
+                    sub?: string;
+                }
+            >;
+        };
     };
 };

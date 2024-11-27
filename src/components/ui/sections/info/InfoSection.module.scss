@@ -43,8 +43,7 @@
             }
 
             @include responsive(mobile) {
-                @include fontStyles($font-unbounded, 30cqw, 800, rgba($color-bg-2, 0.4));
-                margin-left: 1rem;
+                @include fontStyles($font-unbounded, 28cqw, 800, rgba($color-bg-2, 0.4));
                 top: 50%;
                 transform: translate(-50%, -50%) rotate(45deg);
             }

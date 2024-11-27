@@ -131,7 +131,22 @@
                     "sub": "Synchronization of all departments' operations. Double productivity of the warehouse immediately after implementation"
                 }
             }
-        }
+        },
 
+        "modular": {
+            "label": "Modular Solutions",
+            "solutions": {
+                "s1": {
+                    "main": "Sales Planning Module Integrated with BSC",
+                    "sub": "(Balanced Scorecard System)"
+                },
+                "s2": {
+                    "main": "Management Decisions Implementation Control Module"
+                },
+                "s3": {
+                    "main": "KPI Module for Staff Motivation Calculation"
+                }
+            }
+        }
     }
 }

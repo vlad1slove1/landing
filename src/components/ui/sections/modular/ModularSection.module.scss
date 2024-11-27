@@ -1,0 +1,246 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @extend .container;
+
+    .topContent {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        vertical-align: middle;
+
+        @include responsive(large) {
+            margin: 5rem 0;
+        }
+
+        @include responsive(medium) {
+            margin: 2.5rem 0;
+        }
+
+        @include responsive(tablet) {
+            margin: 2rem 0;
+        }
+
+        @include responsive(mobile) {
+            position: relative;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        ul {
+            list-style-type: circle;
+
+            li {
+                @include responsive(large) {
+                    @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .modularWrapper {
+        position: relative;
+        display: block;
+        margin-bottom: 2rem;
+
+        @include responsive(large) {
+            height: calc(400px + 15rem);
+        }
+
+        @include responsive(medium) {
+            height: calc(400px + 18rem);
+        }
+
+        @include responsive(tablet) {
+            height: calc(400px + 10rem);
+        }
+
+        @include responsive(mobile) {
+            height: 350px;
+        }
+
+        .modular {
+            position: relative;
+            display: block;
+            padding: 2rem;
+            height: 100%;
+
+            @include responsive(mobile) {
+                padding: 2rem 0 !important;
+            }
+
+            .solutions {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .solution {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: 0;
+                    border: 1px solid $color-bg-1;
+                    border-radius: 2rem;
+                    padding: 4rem;
+                    transform-style: preserve-3d;
+                    transform: rotateX(55deg) rotateZ(-45deg);
+                    backdrop-filter: blur(4rem);
+                    box-shadow: -10px 10px 0 0 rgba($color-foreground, 0.9);
+
+                    @include responsive(large) {
+                        width: 800px;
+                        height: 400px;
+                    }
+
+                    @include responsive(medium) {
+                        width: 800px;
+                        height: 400px;
+                        padding: 3rem;
+                    }
+
+                    @include responsive(tablet) {
+                        width: 600px;
+                        height: 300px;
+                        padding: 2rem;
+                    }
+
+                    @include responsive(mobile) {
+                        box-shadow: -7px 7px 0 0 rgba($color-foreground, 0.9);
+                        width: 250px;
+                        height: 200px;
+                        padding: 1rem;
+                    }
+
+
+                    &:nth-child(n + 1) {
+                        z-index: 3;
+                        @include responsive(large) {
+                            transform: translateY(-10rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(medium) {
+                            transform: translateY(-5rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(tablet) {
+                            transform: translateY(-4rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(mobile) {
+                            transform: translateY(-2rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+                    }
+
+                    &:nth-child(n + 2) {
+                        z-index: 2;
+                        @include linear-gradient(right, ($color-bg-1, rgba($color-bg-1, 0.7)));
+                        @include responsive(large) {
+                            transform: translateY(-1rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(medium) {
+                            transform: translateY(4rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(tablet) {
+                            transform: translateY(4rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(mobile) {
+                            transform: translateY(4rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        .solutionMain {
+                            color: $color-white !important;
+                        }
+                    }
+
+                    &:nth-child(n + 3) {
+                        z-index: 1;
+                        @include linear-gradient(left, ($color-bg-1, $color-foreground));
+                        @include responsive(large) {
+                            transform: translateY(9rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(medium) {
+                            transform: translateY(13rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(tablet) {
+                            transform: translateY(12rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+
+                        @include responsive(mobile) {
+                            transform: translateY(10rem) rotateX(55deg) rotateZ(-45deg);
+                        }
+                    }
+
+                    .solutionMain {
+                        @include responsive(large) {
+                            @include fontStyles($font-unbounded, 1.7cqw, 700, $color-foreground);
+                        }
+
+                        @include responsive(medium) {
+                            @include fontStyles($font-unbounded, 2.3cqw, 700, $color-foreground);
+                        }
+
+                        @include responsive(tablet) {
+                            @include fontStyles($font-unbounded, 3.5cqw, 700, $color-foreground);
+                        }
+
+                        @include responsive(mobile) {
+                            @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                        }
+                    }
+
+                    .solutionSub {
+                        @include responsive(large) {
+                            @include fontStyles($font-unbounded, 1.3cqw, 400, $color-foreground);
+                        }
+
+                        @include responsive(medium) {
+                            @include fontStyles($font-unbounded, 1.5cqw, 400, $color-foreground);
+                        }
+
+                        @include responsive(tablet) {
+                            @include fontStyles($font-unbounded, 2.5cqw, 400, $color-foreground);
+                        }
+
+                        @include responsive(mobile) {
+                            @include fontStyles($font-unbounded, 12px, 400, $color-foreground);
+                        }
+                    }
+
+                    &:hover {
+                        z-index: 10;
+                        background-color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
