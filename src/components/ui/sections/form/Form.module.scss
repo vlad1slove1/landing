@@ -60,6 +60,26 @@
             input, textarea {
                 background: transparent;
                 border-radius: 0;
+
+                @include responsive(large) {
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+                    margin-bottom: 0.15rem;
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    margin-bottom: 0.07rem;
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    margin-bottom: 0.03rem;
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    margin-bottom: 0.02rem;
+                }
             }
 
             .checkbox {
@@ -88,15 +108,15 @@
                 }
 
                 @include responsive(medium) {
-                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
                 }
 
                 @include responsive(tablet) {
-                    @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
                 }
 
                 @include responsive(mobile) {
-                    @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
                 }
 
                 a {
@@ -109,29 +129,29 @@
                     }
 
                     @include responsive(tablet) {
-                        @include fontStyles($font-montserrat, 12px, 500, $color-primary);
+                        @include fontStyles($font-montserrat, 14px, 500, $color-primary);
                     }
 
                     @include responsive(mobile) {
-                        @include fontStyles($font-montserrat, 12px, 500, $color-primary);
+                        @include fontStyles($font-montserrat, 14px, 500, $color-primary);
                     }
                 }
 
                 label {
                     @include responsive(large) {
-                        @include fontStyles($font-montserrat, 16px, 500, $color-gray);
+                        @include fontStyles($font-montserrat, 18px, 500, $color-gray);
                     }
 
                     @include responsive(medium) {
-                        @include fontStyles($font-montserrat, 14px, 500, $color-gray);
+                        @include fontStyles($font-montserrat, 18px, 500, $color-gray);
                     }
 
                     @include responsive(tablet) {
-                        @include fontStyles($font-montserrat, 12px, 500, $color-gray);
+                        @include fontStyles($font-montserrat, 16px, 500, $color-gray);
                     }
 
                     @include responsive(mobile) {
-                        @include fontStyles($font-montserrat, 12px, 500, $color-gray);
+                        @include fontStyles($font-montserrat, 16px, 500, $color-gray);
                         align-self: start;
                     }
                 }

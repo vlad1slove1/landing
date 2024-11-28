@@ -38,6 +38,15 @@ const Form = () => {
         }
     };
 
+    const validatePhone = (value: string) => {
+        const cleanedValue = value.replace('+7', '').replace(/\D+/g, '');
+
+        const phoneRegex = /^\d{3}\d{3}\d{2}\d{2}$/;
+        const isValidPhone = phoneRegex.test(cleanedValue);
+
+        return isValidPhone || form?.inputs.errors.invalidPhone;
+    };
+
     return (
         <div className={styles.container}>
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -56,6 +65,7 @@ const Form = () => {
                                     required: form?.inputs.errors.required,
                                 })}
                                 isInvalid={!!errors.fullName}
+                                errorMessage={errors.fullName?.message}
                                 className={styles.styledText}
                             />
                         </div>
@@ -75,6 +85,7 @@ const Form = () => {
                                     required: form?.inputs.errors.required,
                                 })}
                                 isInvalid={!!errors.company}
+                                errorMessage={errors.company?.message}
                                 className={styles.styledText}
                             />
                         </div>
@@ -92,10 +103,14 @@ const Form = () => {
                                 isRequired
                                 label={form?.inputs.contact as string}
                                 aria-label={form?.inputs.contact as string}
+                                placeholder="(___)-___-__-__"
+                                startContent="+7"
                                 {...register('contact', {
                                     required: form?.inputs.errors.required,
+                                    validate: validatePhone,
                                 })}
                                 isInvalid={!!errors.contact}
+                                errorMessage={errors.contact?.message}
                                 className={styles.styledText}
                             />
                         </div>

@@ -14,7 +14,7 @@ const handleFormSubmit: SubmitHandler<FormInputs> = async (data: FormInputs) => 
     *⚠️ Новая заявка от ${new Date().toLocaleDateString('ru-RU')}*:
     - *ФИО*: ${data.fullName}
     - *Компания*: ${data.company}
-    - *Контакт*: ${data.contact}
+    - *Контакт*: +7${data.contact}
     - *Комментарий*: ${data.comment || '-'}
     `;
 

@@ -168,7 +168,8 @@
             },
             "inputs": {
                 "errors": {
-                    "required": "Required field"
+                    "required": "Required field",
+                    "invalidPhone": "Invalid phone number"
                 },
                 "fullName": "Full name",
                 "company": "Company",
