@@ -150,6 +150,37 @@
                     "main": "KPI Модуль расчета мотивации персонала"
                 }
             }
+        },
+
+        "form": {
+            "label": "Проконсультируем",
+            "description": "Поможем подобрать подходящее решение",
+            "contacts": {
+                "label": "Написать нам:",
+                "contacts": {
+                    "email": {
+                        "label": "va-maltsev@yandex.ru",
+                        "href": "mailto:va-maltsev@yandex.ru"
+                    },
+
+                    "telegram": {
+                        "label": "Telegram",
+                        "href": "https://t.me/vamaltsev"
+                    }
+                }
+            },
+            "inputs": {
+                "errors": {
+                    "required": "Поле обязательно"
+                },
+                "fullName": "ФИО",
+                "company": "Компания",
+                "contact": "Контакты",
+                "comment": "Комментарий",
+                "consent": "Я соглашаюсь с условиями"
+            },
+            "privacyPolicy": "Политики конфиденциальности",
+            "submitButton": "Отправить"
         }
     }
 }

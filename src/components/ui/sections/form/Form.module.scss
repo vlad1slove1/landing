@@ -1,0 +1,146 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(large) {
+        width: 100%;
+    }
+
+    @include responsive(medium) {
+        width: 100%;
+    }
+
+    @include responsive(tablet) {
+        margin: 0 !important;
+    }
+
+    @include responsive(mobile) {
+        margin: 0 !important;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+
+        .row {
+            display: flex;
+            width: 100%;
+            gap: 2rem;
+
+            @include responsive(mobile) {
+                flex-direction: column;
+            }
+
+            .col {
+                flex-grow: 1;
+            }
+
+            .col--half {
+                flex: 0 0 48.5%;
+            }
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                width: 100%;
+                padding: 0.5rem;
+                resize: none;
+            }
+
+            input, textarea {
+                background: transparent;
+                border-radius: 0;
+            }
+
+            .checkbox {
+                span:before {
+                    border-color: rgba($color-black, 0.2);
+                }
+
+                &.error {
+                    span:before {
+                        border-color: $color-danger;
+                    }
+                }
+            }
+
+            .styledText {
+                @include responsive(mobile) {
+                    flex-direction: column;
+                }
+
+                &.error {
+                    color: $color-danger !important;
+                }
+
+                @include responsive(large) {
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
+                }
+
+                a {
+                    @include responsive(large) {
+                        @include fontStyles($font-montserrat, 16px, 500, $color-primary);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-montserrat, 14px, 500, $color-primary);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-montserrat, 12px, 500, $color-primary);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-montserrat, 12px, 500, $color-primary);
+                    }
+                }
+
+                label {
+                    @include responsive(large) {
+                        @include fontStyles($font-montserrat, 16px, 500, $color-gray);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-montserrat, 14px, 500, $color-gray);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-montserrat, 12px, 500, $color-gray);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-montserrat, 12px, 500, $color-gray);
+                        align-self: start;
+                    }
+                }
+            }
+        }
+
+        .button {
+            align-self: center;
+            width: 15rem;
+        }
+    }
+}

@@ -2,6 +2,10 @@
 @import '@/styles/mixins';
 @import '@/styles/styles';
 
+.bg {
+    @include linear-gradient(top, ($color-bg-2, $color-white));
+}
+
 .container {
     position: relative;
     display: flex;

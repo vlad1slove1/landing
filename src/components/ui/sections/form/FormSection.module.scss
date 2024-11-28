@@ -1,0 +1,174 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.bg {
+    @include linear-gradient(top, ($color-white, $color-bg-2))
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+
+    @extend .container;
+
+    .topContent {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        vertical-align: middle;
+
+        @include responsive(large) {
+            margin: 5rem 0;
+        }
+
+        @include responsive(medium) {
+            margin: 2.5rem 0;
+        }
+
+        @include responsive(tablet) {
+            margin: 2rem 0;
+        }
+
+        @include responsive(mobile) {
+            position: relative;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        ul {
+            list-style-type: circle;
+
+            li {
+                @include responsive(large) {
+                    @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-unbounded, 20px, 700, $color-foreground);
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-unbounded, 14px, 700, $color-foreground);
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 40px, 700, $color-foreground);
+                top: 3rem;
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 36px, 400, $color-foreground);
+                top: 2.5rem;
+                left: 55%;
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+                top: 1.8rem;
+                left: 60%;
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+        }
+    }
+
+    .formContainer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: 5rem 0;
+        gap: 2rem;
+
+        @include responsive(tablet) {
+            flex-direction: column;
+        }
+
+        @include responsive(mobile) {
+            flex-direction: column;
+        }
+    }
+
+    .formContacts {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+
+        @include responsive(tablet) {
+            width: 100%;
+        }
+
+        @include responsive(mobile) {
+            width: 100%;
+        }
+
+        h1 {
+            @include responsive(large) {
+                @include fontStyles($font-montserrat, 20px, 500, $color-gray);
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-montserrat, 20px, 500, $color-gray);
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-montserrat, 20px, 500, $color-gray);
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-montserrat, 20px, 500, $color-gray);
+            }
+        }
+
+        .contacts {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 0;
+            gap: 1rem;
+
+            li a {
+                @include responsive(large) {
+                    @include fontStyles($font-unbounded, 20px, 300, $color-foreground);
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-unbounded, 20px, 300, $color-foreground);
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-unbounded, 20px, 300, $color-foreground);
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-unbounded, 20px, 300, $color-foreground);
+                }
+            }
+        }
+    }
+}

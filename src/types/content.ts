@@ -61,5 +61,20 @@ export type Content = {
                 }
             >;
         };
+
+        form: {
+            label: string;
+            description: string;
+            contacts: {
+                label: string;
+                contacts: Record<string, { label: string; href: string }>;
+            };
+            inputs: {
+                errors: Record<string, string>;
+                [key: string]: string | Record<string, string>;
+            };
+            privacyPolicy: string;
+            submitButton: string;
+        };
     };
 };

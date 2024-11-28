@@ -6,6 +6,7 @@ import ProductsSection from '@/components/ui/sections/products/ProductsSection';
 import InfoSection from '@/components/ui/sections/info/InfoSection';
 import SolutionsSection from '@/components/ui/sections/solutions/SolutionsSection';
 import ModularSection from '@/components/ui/sections/modular/ModularSection';
+import FormSection from '@/components/ui/sections/form/FormSection';
 
 import type { LangParams } from '@/app/[lang]/layout';
 
@@ -19,6 +20,7 @@ export default function Home({ params }: { params: LangParams }) {
             <InfoSection lang={params.lang} />
             <SolutionsSection lang={params.lang} />
             <ModularSection lang={params.lang} />
+            <FormSection lang={params.lang} />
         </>
     );
 }

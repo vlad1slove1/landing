@@ -98,7 +98,7 @@
                 },
 
                 "pr4": {
-                    "label": "Flexible Integration",
+                    "label": "Flexible integration",
                     "li1": "Open API",
                     "li2": "ATI.su",
                     "li3": "Kontur.EDI"
@@ -134,19 +134,51 @@
         },
 
         "modular": {
-            "label": "Modular Solutions",
+            "label": "Modular solutions",
             "solutions": {
                 "s1": {
-                    "main": "Sales Planning Module Integrated with BSC",
+                    "main": "Sales planning module integrated with BSC",
                     "sub": "(Balanced Scorecard System)"
                 },
                 "s2": {
-                    "main": "Management Decisions Implementation Control Module"
+                    "main": "Management decisions implementation control module"
                 },
                 "s3": {
-                    "main": "KPI Module for Staff Motivation Calculation"
+                    "main": "KPI module for staff motivation calculation"
                 }
             }
+        },
+
+        "form": {
+            "label": "We will consult you",
+            "description": "We will help you find a suitable solution",
+            "contacts": {
+                "label": "Contact us:",
+                "contacts": {
+                    "email": {
+                        "label": "va-maltsev@yandex.ru",
+                        "href": "mailto:va-maltsev@yandex.ru"
+                    },
+
+                    "telegram": {
+                        "label": "Telegram",
+                        "href": "https://t.me/vamaltsev"
+                    }
+                }
+            },
+            "inputs": {
+                "errors": {
+                    "required": "Required field"
+                },
+                "fullName": "Full name",
+                "company": "Company",
+                "contact": "Contact information",
+                "comment": "Comment",
+                "consent": "I agree to the terms"
+            },
+            "privacyPolicy": "Privacy policy",
+            "submitButton": "Submit"
         }
+
     }
 }

@@ -7,13 +7,14 @@ import styles from './StyledButton.module.scss';
 
 type Props = {
     label: string;
+    type?: 'button' | 'submit' | 'reset';
     className?: string;
     onClick?: () => void;
 };
 
-const StyledButton: React.FC<Props> = ({ label, onClick, className }) => {
+const StyledButton: React.FC<Props> = ({ label, type = 'button', onClick, className }) => {
     return (
-        <button className={clsx(styles.styledButton, className)} onClick={onClick}>
+        <button type={type} onClick={onClick} className={clsx(styles.styledButton, className)}>
             <div className={styles.iconWrapper}>
                 <span>
                     <Image src={arrowRight} alt="Arrow right" priority={false} />
