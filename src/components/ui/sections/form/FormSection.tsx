@@ -10,7 +10,7 @@ import styles from './FormSection.module.scss';
 
 const FormSection: React.FC<LangParams> = async ({ lang }) => {
     const t = await getLocale(lang);
-    const { label, description, contacts } = t.sections.form;
+    const { label, description, contacts, saveContact } = t.sections.form;
 
     return (
         <div className={styles.bg}>
@@ -26,8 +26,8 @@ const FormSection: React.FC<LangParams> = async ({ lang }) => {
                     <div className={styles.formContacts}>
                         <h1>{contacts.label}</h1>
                         <ul className={styles.contacts}>
-                            <li key="vcard">
-                                <VCFContact />
+                            <li key="vcard" className="flex md:hidden lg:hidden">
+                                <VCFContact label={saveContact} />
                             </li>
                             {Object.entries(contacts.contacts).map(([key, { label, href }]) => (
                                 <li key={key}>
