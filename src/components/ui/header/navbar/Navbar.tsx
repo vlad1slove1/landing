@@ -1,24 +1,30 @@
+'use client';
+
 import React from 'react';
-import { navItems } from '@/config/config';
 import { Link } from '@nextui-org/link';
-import { Path } from '@/lib/enums';
 import useClientLocale from '@/hooks/useClientLocale';
+import useScrollTo from '@/hooks/useScrollTo';
+import { HEADER_HEIGHT } from '@/lib/constants';
 
 import styles from './Navbar.module.scss';
 
 const Navbar: React.FC = () => {
     const { translations } = useClientLocale();
+    const { navbar } = translations.header ?? {};
+    const scrollTo = useScrollTo();
+
     return (
         <div className={styles.navbar}>
-            {navItems.map(({ key }, idx) => (
-                <Link
-                    key={`navItem_${key}_${idx}`}
-                    href={`${Path.HOME}#${key}`}
-                    className={styles.link}
-                >
-                    {translations.header?.navbar[key]}
-                </Link>
-            ))}
+            {navbar &&
+                Object.values(navbar).map(({ label, href }, idx) => (
+                    <Link
+                        key={idx}
+                        onClick={() => scrollTo(href, HEADER_HEIGHT)}
+                        className={styles.link}
+                    >
+                        {label}
+                    </Link>
+                ))}
         </div>
     );
 };

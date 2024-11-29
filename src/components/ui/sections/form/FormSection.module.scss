@@ -13,6 +13,10 @@
     padding-top: 2rem;
     margin-bottom: 3rem;
 
+    @include responsive(mobile) {
+        margin-bottom: 1rem;
+    }
+
     @extend .container;
 
     .topContent {
@@ -110,6 +114,7 @@
 
         @include responsive(mobile) {
             flex-direction: column;
+            margin: 1rem 0;
         }
     }
 

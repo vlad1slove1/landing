@@ -16,8 +16,9 @@ type Product = {
 const ProductsSection: React.FC<LangParams> = async ({ lang }) => {
     const t = await getLocale(lang);
     const { label, description, products } = t.sections.products;
+
     return (
-        <div className={styles.container}>
+        <div id="productsSection" className={styles.container}>
             <div className={styles.topContent}>
                 <ul>
                     <li>{label}</li>

@@ -1,6 +1,6 @@
 export type Content = {
     header: {
-        navbar: Record<string, string>;
+        navbar: Record<string, { label: string; href: string }>;
     };
 
     sections: {
@@ -77,5 +77,11 @@ export type Content = {
             submitButton: string;
             saveContact: string;
         };
+    };
+
+    footer: {
+        requisites: Record<string, string>;
+        contacts: Record<string, { label: string; href: string; text?: string }>;
+        links: Record<string, { label: string; scrollId?: string; href?: string }>;
     };
 };

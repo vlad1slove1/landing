@@ -18,7 +18,7 @@ const SolutionsSection: React.FC<LangParams> = async ({ lang }) => {
     const { label, description, motivation, solutions } = t.sections.solutions;
 
     return (
-        <div className={styles.container}>
+        <div id="solutionsSection" className={styles.container}>
             <div className={styles.topContent}>
                 <ul>
                     <li>{label}</li>

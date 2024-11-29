@@ -10,6 +10,8 @@
 }
 
 .link {
+    cursor: pointer;
+
     @include responsive(large) {
         @include fontStyles($font-montserrat, 20px, 500, $color-white);
     }

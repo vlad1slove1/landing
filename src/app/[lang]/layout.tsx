@@ -1,11 +1,12 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Providers from '@/app/[lang]/providers';
-import Footer from '@/components/Footer';
+import Footer from '@/components/ui/footer/Footer';
 import Header from '@/components/ui/header/Header';
 import { config } from '@/config/config';
 import clsx from 'clsx';
 import MainContainer from '@/components/MainContainer';
 
+import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 
 import './globals.css';

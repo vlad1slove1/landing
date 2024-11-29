@@ -20,7 +20,7 @@ export type FormInputs = {
     comment?: string;
 };
 
-const Form = () => {
+const Form: React.FC = () => {
     const { translations } = useClientLocale();
     const { form } = translations.sections ?? {};
 

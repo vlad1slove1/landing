@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
 import MobileMenuToggle from '../mobileMenuToggle/MobileMenuToggle';
-import { NavItem } from '@/types/navItem';
 import { Link } from '@nextui-org/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import { MOBILE_WIDTH_BREAKPOINT } from '@/lib/constants';
-import { Path } from '@/lib/enums';
+import { HEADER_HEIGHT, MOBILE_WIDTH_BREAKPOINT } from '@/lib/constants';
 import useClientLocale from '@/hooks/useClientLocale';
+import useScrollTo from '@/hooks/useScrollTo';
 
 import useDeviceWidth from '@/hooks/useDeviceWidth';
 
 import styles from './MobileMenu.module.scss';
 
-type Props = {
-    items: NavItem[];
-};
-
-const MobileMenu: React.FC<Props> = ({ items }) => {
+const MobileMenu: React.FC = () => {
+    const { translations } = useClientLocale();
+    const { navbar } = translations.header ?? {};
     const [isOpen, setIsOpen] = useState(false);
     const isMobile = useDeviceWidth(MOBILE_WIDTH_BREAKPOINT);
-    const { translations } = useClientLocale();
+    const scrollTo = useScrollTo();
 
     const handleOpenMenu = () => {
         setIsOpen(!isOpen);
@@ -40,17 +37,20 @@ const MobileMenu: React.FC<Props> = ({ items }) => {
                             className={styles.mobileMenuOverlay}
                         >
                             <nav className={styles.mobileNav}>
-                                {items.map(({ key }, idx) => (
-                                    <div key={`navItem_${key}_${idx}`}>
-                                        <Link
-                                            href={`${Path.HOME}#${key}`}
-                                            onClick={() => setIsOpen(false)}
-                                            className={styles.mobileNavLink}
-                                        >
-                                            {translations.header?.navbar[key]}
-                                        </Link>
-                                    </div>
-                                ))}
+                                {navbar &&
+                                    Object.values(navbar).map(({ label, href }, idx) => (
+                                        <div key={idx}>
+                                            <Link
+                                                onClick={() => {
+                                                    setIsOpen(false);
+                                                    scrollTo(href, HEADER_HEIGHT);
+                                                }}
+                                                className={styles.mobileNavLink}
+                                            >
+                                                {label}
+                                            </Link>
+                                        </div>
+                                    ))}
                             </nav>
                         </motion.div>
                     )}

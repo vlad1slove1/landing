@@ -13,7 +13,7 @@ const FormSection: React.FC<LangParams> = async ({ lang }) => {
     const { label, description, contacts, saveContact } = t.sections.form;
 
     return (
-        <div className={styles.bg}>
+        <div id="formSection" className={styles.bg}>
             <div className={styles.container}>
                 <div className={styles.topContent}>
                     <ul>

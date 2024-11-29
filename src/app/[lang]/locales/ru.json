@@ -1,9 +1,20 @@
 {
     "header": {
         "navbar": {
-            "about": "О компании",
-            "products": "Платформы и продукты",
-            "contacts": "Контакты"
+            "about": {
+                "label": "О компании",
+                "href": "infoSection"
+            },
+
+            "products": {
+                "label": "Платформы и продукты",
+                "href": "productsSection"
+            },
+
+            "contacts": {
+                "label": "Получить решение",
+                "href": "formSection"
+            }
         }
     },
 
@@ -169,6 +180,7 @@
                     }
                 }
             },
+
             "inputs": {
                 "errors": {
                     "required": "Поле обязательно",
@@ -180,9 +192,51 @@
                 "comment": "Комментарий",
                 "consent": "Я соглашаюсь с условиями"
             },
+
             "privacyPolicy": "Политики конфиденциальности",
             "submitButton": "Отправить",
             "saveContact": "Сохранить контакт"
+        }
+    },
+
+    "footer": {
+        "requisites": {
+            "name": "© 2024 ИП Мальцев В.А.",
+            "inn": "ИНН 253603464478",
+            "ogrn": "ОГРН 323237500386245",
+            "okved": "ОКВЭД 62.01 и 62.02"
+        },
+
+        "contacts": {
+            "email": {
+                "label": "Email",
+                "href": "mailto:va-maltsev@yandex.ru",
+                "text": "va-maltsev@yandex.ru"
+            },
+
+            "phone": {
+                "label": "Телефон",
+                "href": "telto:+79183156986",
+                "text": "+7 918 315 69 86"
+            }
+        },
+
+        "links": {
+            "about": {
+                "label": "О компании",
+                "scrollId": "infoSection"
+            },
+
+            "solutions": {
+                "label": "Комплексные решения",
+                "scrollId": "solutionsSection"
+            },
+
+            "contacts": {
+                "label": "Контакты",
+                "scrollId": "",
+                "href": "#contacts"
+            }
         }
     }
 }

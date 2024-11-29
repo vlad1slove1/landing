@@ -1,9 +1,20 @@
 {
     "header": {
         "navbar": {
-            "about": "About",
-            "products": "Platforms and products",
-            "contacts": "Contact us"
+            "about": {
+                "label": "About",
+                "href": "infoSection"
+            },
+
+            "products": {
+                "label": "Platforms and products",
+                "href": "productsSection"
+            },
+
+            "contacts": {
+                "label": "Get a solution",
+                "href": "formSection"
+            }
         }
     },
 
@@ -166,6 +177,7 @@
                     }
                 }
             },
+
             "inputs": {
                 "errors": {
                     "required": "Required field",
@@ -177,10 +189,49 @@
                 "comment": "Comment",
                 "consent": "I agree to the terms"
             },
+
             "privacyPolicy": "Privacy policy",
             "submitButton": "Submit",
             "saveContact": "Save contact"
         }
+    },
 
+    "footer": {
+        "requisites": {
+            "name": "© 2024 V.A. Maltsev Sole Proprietorship",
+            "inn": "INN 253603464478",
+            "ogrn": "OGRN 323237500386245",
+            "okved": "OKVED 62.01 and 62.02"
+        },
+
+        "contacts": {
+            "email": {
+                "label": "Email",
+                "href": "mailto:va-maltsev@yandex.ru",
+                "text": "va-maltsev@yandex.ru"
+            },
+
+            "phone": {
+                "label": "Phone",
+                "href": "+7 918 315 69 86"
+            }
+        },
+
+        "links": {
+            "about": {
+                "label": "About us",
+                "scrollId": "infoSection"
+            },
+
+            "solutions": {
+                "label": "Comprehensive solutions",
+                "scrollId": "solutionsSection"
+            },
+
+            "contacts": {
+                "label": "Contacts",
+                "href": "/"
+            }
+        }
     }
 }
