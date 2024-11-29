@@ -26,7 +26,7 @@ const FormSection: React.FC<LangParams> = async ({ lang }) => {
                     <div className={styles.formContacts}>
                         <h1>{contacts.label}</h1>
                         <ul className={styles.contacts}>
-                            <li key="vcard" className="flex md:hidden lg:hidden">
+                            <li key="vcard" className="flex">
                                 <VCFContact label={saveContact} />
                             </li>
                             {Object.entries(contacts.contacts).map(([key, { label, href }]) => (
