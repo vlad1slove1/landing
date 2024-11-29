@@ -1,3 +1,4 @@
+import VCFContact from '@/components/ui/sections/form/VCFContact';
 import React from 'react';
 import getLocale from '@/app/[lang]/getLocale';
 import { Link } from '@nextui-org/link';
@@ -25,6 +26,9 @@ const FormSection: React.FC<LangParams> = async ({ lang }) => {
                     <div className={styles.formContacts}>
                         <h1>{contacts.label}</h1>
                         <ul className={styles.contacts}>
+                            <li key="vcard">
+                                <VCFContact />
+                            </li>
                             {Object.entries(contacts.contacts).map(([key, { label, href }]) => (
                                 <li key={key}>
                                     <Link isExternal href={href}>

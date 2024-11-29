@@ -75,6 +75,7 @@ export type Content = {
             };
             privacyPolicy: string;
             submitButton: string;
+            saveContact: string;
         };
     };
 };

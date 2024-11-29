@@ -178,7 +178,8 @@
                 "consent": "I agree to the terms"
             },
             "privacyPolicy": "Privacy policy",
-            "submitButton": "Submit"
+            "submitButton": "Submit",
+            "saveContact": "Save contact"
         }
 
     }
