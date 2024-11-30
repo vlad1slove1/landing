@@ -213,7 +213,8 @@
 
             "phone": {
                 "label": "Phone",
-                "href": "+7 918 315 69 86"
+                "href": "tel:+79183156986",
+                "text": "+7 918 315 69 86"
             }
         },
 
@@ -234,6 +235,27 @@
             }
         }
     },
+
+    "contacts": {
+        "label": "Contacts",
+        "button": "Go to website",
+        "contacts": {
+            "c1": {
+                "fullName": "Dmitry Viktorovich Terentyev",
+                "position": "commercial director",
+                "email": "mailto:k9_90@mail.ru",
+                "phone": "tel:+79180887774"
+            },
+
+            "c2": {
+                "fullName": "Valery Alexandrovich Maltsev",
+                "position": "project manager, analyst",
+                "email": "mailto:va-maltsev@yandex.ru",
+                "phone": "tel:+79183156986"
+            }
+        }
+    },
+
 
     "notFound": {
         "title": "404",
