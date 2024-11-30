@@ -1,0 +1,146 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.bg {
+    @include linear-gradient(top-left, ($color-white, $color-bg-2));
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @extend .container;
+
+    @include responsive(large) {
+        min-height: 90vh;
+    }
+
+    @include responsive(medium) {
+        min-height: 90vh;
+    }
+
+    @include responsive(tablet) {
+        min-height: 75vh;
+    }
+
+    @include responsive(mobile) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .topContainer {
+        position: relative;
+        width: 40%;
+
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-top: 3rem;
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 36px, 400, $color-foreground);
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 160px, 400, $color-white);
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 100px, 400, $color-white);
+                top: 37%;
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 64px, 400, $color-white);
+                top: 28%
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 24px, 400, $color-white);
+                top: 62%;
+            }
+        }
+    }
+
+    .descriptionContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        gap: 2rem;
+        width: 60%;
+
+        @include responsive(tablet) {
+            bottom: 5rem;
+        }
+
+        @include responsive(mobile) {
+            width: 100%;
+        }
+
+        h3 {
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 40px, 400, $color-foreground);
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 36px, 400, $color-foreground);
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 16px, 400, $color-foreground);
+            }
+        }
+
+        p {
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 30px, 400, $color-foreground);
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 28px, 400, $color-foreground);
+                width: 98%;
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 16px, 400, $color-foreground);
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 12px, 400, $color-foreground);
+            }
+        }
+
+        button {
+            display: flex;
+            align-self: flex-end;
+
+            @include responsive(mobile) {
+                align-self: center;
+            }
+        }
+    }
+}

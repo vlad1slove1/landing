@@ -1,4 +1,4 @@
-import type { FormInputs } from '@/components/ui/sections/form/Form';
+import type { FormInputs } from '@/components/pages/main/sections/form/Form';
 import type { SubmitHandler } from 'react-hook-form';
 
 const handleFormSubmit: SubmitHandler<FormInputs> = async (data: FormInputs) => {

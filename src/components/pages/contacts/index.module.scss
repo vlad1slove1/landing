@@ -1,0 +1,144 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.bg {
+    @include linear-gradient(right, ($color-foreground, $color-bg-1));
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @extend .container;
+
+    .topContainer {
+        position: relative;
+        display: flex;
+
+        h1 {
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 160px, 400, $color-white);
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 100px, 400, $color-white);
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 60px, 400, $color-white);
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 36px, 400, $color-white);
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .mainContainer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        .logo {
+            opacity: 0.3;
+
+            @include responsive(large) {
+                width: 40rem;
+            }
+
+            @include responsive(medium) {
+                width: 25rem;
+            }
+
+            @include responsive(mobile) {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0.1;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                @include responsive(tablet) {
+                    gap: 0.5rem;
+                }
+
+                @include responsive(mobile) {
+                    gap: 0;
+                }
+
+                h1 {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 46px, 400, $color-white);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 34px, 400, $color-white);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 22px, 400, $color-white);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 22px, 400, $color-white);
+                    }
+                }
+
+                h2, a {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 30px, 400, $color-white);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 24px, 400, $color-white);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 16px, 400, $color-white);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 14px, 400, $color-white);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        @include responsive(medium) {
+            margin: 2rem 0;
+        }
+
+        button {
+            @include responsive(mobile) {
+                width: 75%;
+            }
+        }
+    }
+}

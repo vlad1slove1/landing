@@ -10,7 +10,14 @@ export type LogoProps = {
 };
 
 export const Logo: React.FC<LogoProps> = ({ className }) => (
-    <Image src={logo} alt="UP-BP logo" width={230} priority quality={100} className={className} />
+    <Image
+        src={logo}
+        alt="UP-BP logo"
+        width={230}
+        priority={false}
+        quality={100}
+        className={className}
+    />
 );
 
 export const themeSwitchIcon = {

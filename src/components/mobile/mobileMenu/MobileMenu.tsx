@@ -38,12 +38,16 @@ const MobileMenu: React.FC = () => {
                         >
                             <nav className={styles.mobileNav}>
                                 {navbar &&
-                                    Object.values(navbar).map(({ label, href }, idx) => (
+                                    Object.values(navbar).map(({ label, scrollId, href }, idx) => (
                                         <div key={idx}>
                                             <Link
+                                                key={idx}
+                                                href={href ? href : undefined}
                                                 onClick={() => {
                                                     setIsOpen(false);
-                                                    scrollTo(href, HEADER_HEIGHT);
+                                                    scrollId
+                                                        ? scrollTo(scrollId, HEADER_HEIGHT)
+                                                        : null;
                                                 }}
                                                 className={styles.mobileNavLink}
                                             >

@@ -4,6 +4,6 @@ export const languages = [
 ];
 
 export const config = {
-    name: '',
+    name: 'UPBP',
     description: 'Unlimited Performance Business Processes',
 };

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useState, useEffect, useCallback } from 'react';
-import getLocale from '@/app/[lang]/getLocale';
+import getLocale from '@/app/[locale]/getLocale';
 
 import type { ReactNode } from 'react';
 import type { Content } from '@/types/content';

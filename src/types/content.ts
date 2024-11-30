@@ -1,6 +1,6 @@
 export type Content = {
     header: {
-        navbar: Record<string, { label: string; href: string }>;
+        navbar: Record<string, { label: string; scrollId?: string; href?: string }>;
     };
 
     sections: {
@@ -83,5 +83,26 @@ export type Content = {
         requisites: Record<string, string>;
         contacts: Record<string, { label: string; href: string; text?: string }>;
         links: Record<string, { label: string; scrollId?: string; href?: string }>;
+    };
+
+    contacts: {
+        label: string;
+        button: string;
+        contacts: Record<
+            string,
+            {
+                fullName: string;
+                position: string;
+                email: string;
+                phone: string;
+            }
+        >;
+    };
+
+    notFound: {
+        title: string;
+        label: string;
+        description: string;
+        button: string;
     };
 };
