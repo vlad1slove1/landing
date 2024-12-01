@@ -3,6 +3,7 @@ import getLocale from '@/app/[locale]/getLocale';
 import Image from 'next/image';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Chip } from '@nextui-org/chip';
+import { ElementId } from '@/lib/enums';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
@@ -18,7 +19,7 @@ const ProductsSection: React.FC<LangParams> = async ({ locale }) => {
     const { label, description, products } = t.sections.products;
 
     return (
-        <div id="productsSection" className={styles.container}>
+        <div id={ElementId.PRODUCTS_SECTION} className={styles.container}>
             <div className={styles.topContent}>
                 <ul>
                     <li>{label}</li>

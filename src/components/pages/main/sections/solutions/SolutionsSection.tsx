@@ -1,7 +1,8 @@
 import React from 'react';
 import getLocale from '@/app/[locale]/getLocale';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import { ElementId } from '@/lib/enums';
+import StyledButtonWrapper from '@/components/pages/styledButton/StyledButtonWrapper';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
@@ -18,7 +19,7 @@ const SolutionsSection: React.FC<LangParams> = async ({ locale }) => {
     const { label, description, motivation, solutions } = t.sections.solutions;
 
     return (
-        <div id="solutionsSection" className={styles.container}>
+        <div id={ElementId.SOLUTIONS_SECTION} className={styles.container}>
             <div className={styles.topContent}>
                 <ul>
                     <li>{label}</li>
@@ -34,7 +35,12 @@ const SolutionsSection: React.FC<LangParams> = async ({ locale }) => {
 
             <div className={styles.bottomContent}>
                 <h1>{motivation}</h1>
-                <StyledButton label={t.sections.general.button} className={styles.button} />
+
+                <StyledButtonWrapper
+                    label={t.sections.general.button}
+                    className={styles.button}
+                    scrollTo={ElementId.FORM_SECTION}
+                />
             </div>
         </div>
     );

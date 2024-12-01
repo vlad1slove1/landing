@@ -1,8 +1,9 @@
 'use client';
 
+import React from 'react';
 import useClientLocale from '@/hooks/useClientLocale';
 import { HEADER_HEIGHT } from '@/lib/constants';
-import React from 'react';
+import { Path } from '@/lib/enums';
 import { Divider } from '@nextui-org/divider';
 import { Link } from '@nextui-org/link';
 import Image from 'next/image';
@@ -62,9 +63,7 @@ const Footer: React.FC = () => {
                     <Divider />
 
                     <div className={styles.policyContainer}>
-                        <Link isExternal href={'/src/public'}>
-                            {form?.privacyPolicy}
-                        </Link>
+                        <Link href={Path.PRIVACY}>{form?.privacyPolicy}</Link>
 
                         <Link onClick={() => scrollTo(0)} className="cursor-pointer">
                             <Image src={arrowTop} alt="Arrow-top" />

@@ -1,0 +1,60 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/styles';
+
+.bg {
+    @include linear-gradient(right, ($color-bg-2, $color-white));
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @extend .container;
+
+    h1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+
+        @include responsive(large) {
+            @include fontStyles($font-unbounded, 40px, 400, $color-foreground);
+        }
+
+        @include responsive(medium) {
+            @include fontStyles($font-unbounded, 40px, 400, $color-foreground);
+        }
+
+        @include responsive(tablet) {
+            @include fontStyles($font-unbounded, 30px, 400, $color-foreground);
+        }
+
+        @include responsive(mobile) {
+            @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+        }
+    }
+
+    h2, li, td {
+        text-align: justify;
+
+        @include responsive(large) {
+            @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+        }
+
+        @include responsive(medium) {
+            @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+        }
+
+        @include responsive(tablet) {
+            @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
+        }
+
+        @include responsive(mobile) {
+            @include fontStyles($font-montserrat, 12px, 500, $color-foreground);
+        }
+    }
+}

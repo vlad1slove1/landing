@@ -1,10 +1,10 @@
 import React from 'react';
 import getLocale from '@/app/[locale]/getLocale';
 import { Link } from '@nextui-org/link';
-import { Path } from '@/lib/enums';
+import { ElementId, Path } from '@/lib/enums';
 import { Logo } from '@/components/icon/Icons';
 import Image from 'next/image';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import StyledButtonWrapper from '@/components/pages/styledButton/StyledButtonWrapper';
 import ellipse1 from '@/public/ellipse1.svg';
 import ellipse2 from '@/public/ellipse2.svg';
 
@@ -15,8 +15,9 @@ import styles from './GeneralSection.module.scss';
 const GeneralSection: React.FC<LangParams> = async ({ locale }) => {
     const t = await getLocale(locale);
     const { h1, p1, h2, button } = t.sections.general;
+
     return (
-        <div className={styles.bg}>
+        <div id={ElementId.GENERAL_SECTION} className={styles.bg}>
             <div className={styles.section}>
                 <div className={styles.topContent}>
                     <Link href={Path.HOME}>
@@ -30,7 +31,11 @@ const GeneralSection: React.FC<LangParams> = async ({ locale }) => {
 
                 <h1 className={styles.h2}>{h2}</h1>
 
-                <StyledButton label={button} className={styles.button} />
+                <StyledButtonWrapper
+                    label={button}
+                    className={styles.button}
+                    scrollTo={ElementId.FORM_SECTION}
+                />
             </div>
             <Image alt="White ellipse" src={ellipse1} priority={false} className={styles.bg1} />
             <Image

@@ -3,6 +3,7 @@ import getLocale from '@/app/[locale]/getLocale';
 import { Link } from '@nextui-org/link';
 import Form from '@/components/pages/main/sections/form/Form';
 import VCFContact from '@/components/pages/main/sections/form/VCFContact';
+import { ElementId } from '@/lib/enums';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
@@ -13,7 +14,7 @@ const FormSection: React.FC<LangParams> = async ({ locale }) => {
     const { label, description, contacts, saveContact } = t.sections.form;
 
     return (
-        <div id="formSection" className={styles.bg}>
+        <div id={ElementId.FORM_SECTION} className={styles.bg}>
             <div className={styles.container}>
                 <div className={styles.topContent}>
                     <ul>

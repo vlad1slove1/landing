@@ -9,6 +9,7 @@ import useClientLocale from '@/hooks/useClientLocale';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from '@nextui-org/link';
 import handleFormSubmit from '@/util/handleFormSubmit';
+import { Path } from '@/lib/enums';
 
 import styles from './Form.module.scss';
 
@@ -151,9 +152,7 @@ const Form: React.FC = () => {
                             )}
                         >
                             {form?.inputs.consent as string}
-                            <Link isExternal href={'/src/public'}>
-                                {form?.privacyPolicy}
-                            </Link>
+                            <Link href={Path.PRIVACY}>{form?.privacyPolicy}</Link>
                         </div>
                     </Checkbox>
                 </div>

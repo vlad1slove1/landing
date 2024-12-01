@@ -11,7 +11,7 @@ import SolutionsSection from '@/components/pages/main/sections/solutions/Solutio
 
 import type { LangParams } from '@/app/[locale]/layout';
 
-export default function ({ params }: { params: LangParams }) {
+export default function Page({ params }: { params: LangParams }) {
     return (
         <PageLayout showHeader showFooter>
             <GeneralSection locale={params.locale} />

@@ -262,5 +262,168 @@
         "label": "It seems something went wrong!",
         "description": "The page you are looking for does not exist. It might be outdated, deleted, or the address was entered incorrectly in the address bar",
         "button": "Return home"
+    },
+
+    "policy": {
+        "label": "Personal data processing policy",
+        "button": "Return to the homepage",
+        "chapters": {
+            "ch1": {
+                "title": "1. General provisions",
+                "articles": {
+                    "1": "This personal data processing policy is compiled in accordance with the requirements of Federal Law No. 152-FZ of 27.07.2006 'On Personal Data' (hereinafter referred to as the Personal Data Law) and defines the procedure for processing personal data and measures for ensuring the security of personal data taken by individual entrepreneur Maltsov Valery Alexandrovich (hereinafter referred to as the Operator).",
+                    "1.1": "The Operator's primary goal and condition for carrying out its activities is the observance of human and citizen rights and freedoms when processing their personal data, including the protection of rights to privacy, personal and family secrets.",
+                    "1.2": "This policy of the Operator regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator may receive about visitors to the website https://up-bp.ru."
+                }
+            },
+
+            "ch2": {
+                "title": "2. Key terms used in the policy",
+                "articles": {
+                    "2.1": "Automated processing of personal data — processing of personal data using computer technology.",
+                    "2.2": "Blocking of personal data — temporary cessation of the processing of personal data (except in cases where processing is required for clarification of personal data).",
+                    "2.3": "Website — a set of graphic and informational materials, as well as computer programs and databases, ensuring their availability on the internet at the network address https://up-bp.ru.",
+                    "2.4": "Information system of personal data — a set of personal data contained in databases and ensuring their processing through information technologies and technical means.",
+                    "2.5": "De-identification of personal data — actions that make it impossible to determine the ownership of personal data to a specific User or another subject of personal data without using additional information.",
+                    "2.6": "Processing of personal data — any action (operation) or set of actions (operations) performed with personal data using automation means or without such means, including collection, recording, systematization, accumulation, storage, updating (modification), extraction, use, transmission (distribution, provision, access), de-identification, blocking, deletion, destruction of personal data.",
+                    "2.7": "Operator — a state body, a municipal body, a legal entity or an individual who independently or jointly with other persons organizes and/or carries out personal data processing and also determines the purposes of processing personal data, the composition of personal data subject to processing, and actions (operations) performed with personal data.",
+                    "2.8": "Personal data — any information relating directly or indirectly to a specific or identifiable User of the website https://up-bp.ru.",
+                    "2.9": "Personal data permitted by the subject of personal data for dissemination — personal data to which an unlimited circle of persons has access, granted by the subject of personal data through consent for processing personal data, permitted for dissemination in accordance with the Personal Data Law (hereinafter referred to as personal data permitted for dissemination).",
+                    "2.10": "User — any visitor to the website https://up-bp.ru.",
+                    "2.11": "Provision of personal data — actions aimed at disclosing personal data to a specific person or a specific group of persons.",
+                    "2.12": "Dissemination of personal data — any actions aimed at disclosing personal data to an indefinite group of persons (transmission of personal data) or at making personal data accessible to an indefinite group of persons, including publicizing personal data in the media, posting in information and telecommunications networks, or providing access to personal data in any other way.",
+                    "2.13": "Cross-border transfer of personal data — transfer of personal data to a foreign state authority, foreign individual, or foreign legal entity.",
+                    "2.14": "Destruction of personal data — any actions resulting in the irreversible destruction of personal data with no possibility of further restoration of the content of personal data in the personal data information system and/or destruction of material media containing personal data."
+                }
+            },
+
+            "ch3": {
+                "title": "3. Key rights and obligations of the Operator",
+                "articles": {
+                    "3.1": [
+                        "3.1 The Operator has the right to:",
+                        "— receive from the subject of personal data reliable information and/or documents containing personal data;",
+                        "— in the event of the subject of personal data withdrawing consent for processing personal data, as well as sending a request for termination of personal data processing, the Operator may continue processing personal data without the consent of the subject of personal data if there are grounds specified in the Personal Data Law;",
+                        "— independently determine the composition and list of measures necessary and sufficient to ensure compliance with the obligations established by the Personal Data Law and other regulatory legal acts based on it, unless otherwise provided by the Personal Data Law or other federal laws."
+                    ],
+                    "3.2": [
+                        "3.2 The Operator is obliged to:",
+                        "— provide the subject of personal data with information about the processing of their personal data upon request;",
+                        "— organize the processing of personal data in accordance with the current legislation of the Russian Federation;",
+                        "— respond to requests and inquiries from subjects of personal data and their legal representatives in accordance with the requirements of the Personal Data Law;",
+                        "— provide necessary information to the authorized body for protecting the rights of subjects of personal data within 10 days from the date of receipt of such a request;",
+                        "— publish or otherwise ensure unrestricted access to this Policy regarding the processing of personal data;",
+                        "— take legal, organizational, and technical measures to protect personal data from unlawful or accidental access, destruction, modification, blocking, copying, provision, dissemination, as well as from other unlawful actions with personal data;",
+                        "— cease transmission (dissemination, provision, access) of personal data, cease processing and destroy personal data in the cases and procedures established by the Personal Data Law;",
+                        "— perform other duties provided by the Personal Data Law."
+                    ]
+                }
+            },
+
+            "ch4": {
+                "title": "4. Key rights and obligations of Personal Data subjects",
+                "articles": {
+                    "4.1": [
+                        "4.1. Personal data subjects have the right to:",
+                        "— receive information about the processing of their personal data, except in cases specified by federal laws. The information is provided to the subject of personal data by the Operator in an accessible form, and it should not contain personal data related to other subjects of personal data, unless there are legal grounds for disclosing such personal data. The list of information and the procedure for its receipt are established by the Personal Data Law;",
+                        "— require the Operator to clarify, block, or delete their personal data if the personal data is incomplete, outdated, inaccurate, unlawfully obtained, or unnecessary for the stated purpose of processing, as well as take legal measures to protect their rights;",
+                        "— set conditions for prior consent when processing personal data for the purposes of promoting goods, works, and services on the market;",
+                        "— withdraw consent to the processing of personal data and send a request for the cessation of personal data processing;",
+                        "— appeal to the authorized body for the protection of personal data subjects' rights or to court for unlawful actions or omissions of the Operator during the processing of their personal data",
+                        "— exercise other rights provided by the legislation of the Russian Federation."
+                    ],
+                    "4.2": [
+                        "4.2. Personal data subjects are obliged to:",
+                        "— provide the Operator with reliable data about themselves;",
+                        "— inform the Operator of any clarification (updating, modification) of their personal data."
+                    ],
+                    "4.3": "Persons who provided the Operator with inaccurate information about themselves or information about another subject of personal data without the latter's consent are responsible in accordance with the legislation of the Russian Federation."
+                }
+            },
+
+            "ch5": {
+                "title": "5. Principles of Personal Data processing",
+                "articles": {
+                    "5.1": "Personal data processing is carried out on a lawful and fair basis.",
+                    "5.2": "Personal data processing is limited to achieving specific, predefined, and lawful purposes. Processing of personal data incompatible with the purposes for which they were collected is not allowed.",
+                    "5.3": "Combining databases containing personal data for processing purposes that are incompatible with each other is not allowed.",
+                    "5.4": "Only personal data necessary for the purposes of their processing should be processed.",
+                    "5.5": "The content and scope of the personal data being processed should correspond to the declared purposes of processing. The processing of excessive personal data relative to the stated processing goals is not allowed.",
+                    "5.6": "When processing personal data, accuracy, sufficiency, and, when necessary, relevance to the processing goals should be ensured. The Operator takes the necessary measures and/or ensures that such measures are taken to remove or clarify incomplete or inaccurate data.",
+                    "5.7": "Personal data is stored in a form that allows identification of the data subject for no longer than required to achieve the purposes of personal data processing, unless the storage period is set by federal law, contract, or another legal document. Personal data is destroyed or de-identified once the processing purposes are achieved or if there is no further need to achieve these purposes, unless otherwise provided by federal law."
+                }
+            },
+
+            "ch6": {
+                "title": "6. Purposes of Personal Data processing",
+                "table": {
+                    "Purpose of Processing": "Informing the User by sending electronic emails",
+                    "Personal Data": "Last name, first name, patronymic, email address, phone numbers",
+                    "Legal Grounds": "Registration documents of the Operator, contracts concluded between the operator and the subject of personal data",
+                    "Types of Personal Data Processing": "Collection, recording, systematization, accumulation, storage, destruction, and anonymization of personal data, Sending informational emails to the email address"
+                }
+            },
+
+            "ch7": {
+                "title": "7. Conditions for the processing of Personal Data",
+                "articles": {
+                    "7.1": "Personal data is processed with the consent of the personal data subject for the processing of their personal data.",
+                    "7.2": "Personal data processing is necessary for the achievement of the purposes stipulated by the international treaty of the Russian Federation or by law, for the performance of functions, powers, and duties assigned to the operator by the legislation of the Russian Federation.",
+                    "7.3": "Personal data processing is necessary for the administration of justice, execution of a judicial act, an act of another authority or official, which must be executed in accordance with the legislation of the Russian Federation on enforcement proceedings.",
+                    "7.4": "Personal data processing is necessary for the performance of a contract, the party to which or the beneficiary or guarantor of which is the personal data subject, as well as for concluding a contract at the initiative of the personal data subject or a contract in which the personal data subject will be the beneficiary or guarantor.",
+                    "7.5": "Personal data processing is necessary for the exercise of the rights and legitimate interests of the operator or third parties or for the achievement of socially significant goals, provided that the rights and freedoms of the personal data subject are not violated.",
+                    "7.6": "Personal data is processed, to which an unlimited number of persons have access, provided by the personal data subject or at their request (hereinafter referred to as publicly available personal data).",
+                    "7.7": "Personal data is processed, which is subject to publication or mandatory disclosure in accordance with federal law."
+                }
+            },
+
+            "ch8": {
+                "title": "8. Procedure for collection, storage, transfer, and other types of processing of Personal Data",
+                "articles": {
+                    "8.1": "The security of personal data processed by the Operator is ensured by implementing legal, organizational, and technical measures necessary to fully comply with the requirements of the current legislation in the field of personal data protection.",
+                    "8.2": "The Operator ensures the security of personal data and takes all possible measures to prevent unauthorized access to personal data.",
+                    "8.3": "Personal data of the User will never be transferred to third parties, except in cases related to the implementation of current legislation or if the personal data subject has given consent to the Operator for the transfer of data to a third party for the fulfillment of obligations under a civil law contract.",
+                    "8.4": "In case of inaccuracies in personal data, the User may update them independently by sending a notification to the Operator’s email address va-maltsеv@yandеx.ru with the subject 'Updating Personal Data'.",
+                    "8.5": "The processing time of personal data is determined by the achievement of the goals for which the personal data was collected, unless another period is specified by the contract or applicable law. The User may withdraw their consent to process personal data at any time by sending a notification to the Operator via email to va-maltsеv@yandеx.ru with the subject 'Withdrawal of Consent to Process Personal Data'.",
+                    "8.6": "All information collected by third-party services, including payment systems, communication means, and other service providers, is stored and processed by these entities (Operators) in accordance with their User Agreement and Privacy Policy. The Operator is not responsible for the actions of third parties, including those specified in this section.",
+                    "8.7": "Restrictions set by the personal data subject on transfer (except for providing access) and on the processing or conditions of processing (except for granting access) of personal data allowed for dissemination do not apply in cases of personal data processing in state, public, and other public interests as defined by Russian Federation legislation.",
+                    "8.8": "The Operator ensures the confidentiality of personal data when processing it.",
+                    "8.9": "The Operator stores personal data in a form that allows the identification of the personal data subject no longer than required for the processing purposes unless the storage period is set by federal law, contract, or as a party, beneficiary, or guarantor of which the personal data subject is involved.",
+                    "8.10": "The termination of personal data processing may occur upon achievement of the processing goals, expiration of the consent period, withdrawal of consent by the personal data subject, or upon a request to stop processing personal data, as well as the detection of unlawful processing of personal data."
+                }
+            },
+
+            "ch9": {
+                "title": "9. List of actions performed by the Operator with received Personal Data",
+                "articles": {
+                    "9.1": "The Operator collects, records, systematizes, accumulates, stores, updates (modifies), extracts, uses, transfers (distributes, provides, accesses), anonymizes, blocks, deletes, and destroys personal data.",
+                    "9.2": "The Operator performs automated processing of personal data with the receipt and/or transmission of the obtained information via information and telecommunications networks or without it."
+                }
+            },
+
+            "ch10": {
+                "title": "10. Cross-border transfer of Personal Data",
+                "articles": {
+                    "10.1": "Before starting cross-border transfer of personal data, the Operator must notify the authorized body for the protection of personal data subjects' rights about their intention to carry out cross-border transfer (such a notification is sent separately from the notification about the intention to process personal data).",
+                    "10.2": "Before submitting the above-mentioned notification, the Operator must obtain the corresponding information from foreign authorities, foreign natural persons, or foreign legal entities to whom the personal data will be transferred."
+                }
+            },
+
+            "ch11": {
+                "title": "11. Confidentiality of Personal Data",
+                "articles": {
+                    "11.1": "The Operator and other persons who have access to personal data are obligated not to disclose or distribute personal data to third parties without the consent of the personal data subject, unless otherwise provided by federal law."
+                }
+            },
+
+            "ch12": {
+                "title": "12. Final Provisions",
+                "articles": {
+                    "12.1": "The User can get any clarifications on issues related to the processing of their personal data by contacting the Operator via email at va-maltsеv@yandеx.ru.",
+                    "12.2": "This document will reflect any changes in the Operator's personal data processing policy. The policy remains valid indefinitely until replaced with a new version.",
+                    "12.3": "The current version of the Policy is freely available on the Internet at https://up-bp.ru/privacy/."
+                }
+            }
+        }
     }
 }

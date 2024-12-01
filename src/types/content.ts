@@ -105,4 +105,17 @@ export type Content = {
         description: string;
         button: string;
     };
+
+    policy: {
+        label: string;
+        button: string;
+        chapters: Record<
+            string,
+            {
+                title: string;
+                articles?: Record<string, string>;
+                table?: Record<string, string>;
+            }
+        >;
+    };
 };

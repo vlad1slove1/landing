@@ -1,5 +1,6 @@
 'use client';
 
+import useScrollTo from '@/hooks/useScrollTo';
 import React from 'react';
 import Navbar from '@/components/pages/main/header/navbar/Navbar';
 import LanguageSelector from '@/components/pages/main/header/languageSelector/LanguageSelector';
@@ -14,12 +15,18 @@ import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
     const isMobile = useDeviceWidth(MOBILE_WIDTH_BREAKPOINT);
+    const scrollTo = useScrollTo();
+
+    const handleClick = () => {
+        return scrollTo(0);
+    };
+
     return (
         <header className={clsx(styles.header, 'header')}>
             <div className={styles.container}>
                 {isMobile ? (
                     <>
-                        <Link href="/">
+                        <Link onClick={handleClick}>
                             <Logo className={styles.logo} />
                         </Link>
                         <div className={styles.container}>

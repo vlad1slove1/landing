@@ -1,7 +1,8 @@
 import React from 'react';
 import getLocale from '@/app/[locale]/getLocale';
 import Image from 'next/image';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import StyledButtonWrapper from '@/components/pages/styledButton/StyledButtonWrapper';
+import { ElementId } from '@/lib/enums';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
@@ -15,8 +16,9 @@ type Service = {
 const ServicesSection: React.FC<LangParams> = async ({ locale }) => {
     const t = await getLocale(locale);
     const services = Object.entries(t.sections.services ?? {});
+
     return (
-        <div className={styles.container}>
+        <div id={ElementId.SERVICES_SECTION} className={styles.container}>
             <table className={styles.table}>
                 <tbody>
                     {services.map(([key, service]) =>
@@ -24,7 +26,12 @@ const ServicesSection: React.FC<LangParams> = async ({ locale }) => {
                     )}
                 </tbody>
             </table>
-            <StyledButton label={t.sections.general.button} className={styles.button} />
+
+            <StyledButtonWrapper
+                label={t.sections.general.button}
+                className={styles.button}
+                scrollTo={ElementId.FORM_SECTION}
+            />
         </div>
     );
 };

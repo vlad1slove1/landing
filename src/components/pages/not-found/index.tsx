@@ -10,7 +10,7 @@ import errorBg from '@/public/error-bg.svg';
 
 import styles from './index.module.scss';
 
-export default function () {
+export default function Page() {
     const { translations } = useClientLocale();
     const { notFound } = translations;
     const router = useRouter();

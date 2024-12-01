@@ -1,5 +1,6 @@
 import React from 'react';
 import getLocale from '@/app/[locale]/getLocale';
+import { ElementId } from '@/lib/enums';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
@@ -10,7 +11,7 @@ const ModularSection: React.FC<LangParams> = async ({ locale }) => {
     const { label, solutions } = t.sections.modular;
 
     return (
-        <div className={styles.bg}>
+        <div id={ElementId.MODULAR_SECTION} className={styles.bg}>
             <div className={styles.container}>
                 <div className={styles.topContent}>
                     <ul>

@@ -10,7 +10,7 @@ import { Link } from '@nextui-org/link';
 
 import styles from './index.module.scss';
 
-export default function () {
+export default function Page() {
     const { translations } = useClientLocale();
     const { contacts } = translations;
     const router = useRouter();

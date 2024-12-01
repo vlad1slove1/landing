@@ -5,14 +5,19 @@ import clsx from 'clsx';
 
 import styles from './StyledButton.module.scss';
 
-type Props = {
+export type StyledButtonProps = {
     label: string;
     type?: 'button' | 'submit' | 'reset';
     className?: string;
     onClick?: () => void;
 };
 
-const StyledButton: React.FC<Props> = ({ label, type = 'button', onClick, className }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({
+    label,
+    type = 'button',
+    onClick,
+    className,
+}) => {
     return (
         <button type={type} onClick={onClick} className={clsx(styles.styledButton, className)}>
             <div className={styles.iconWrapper}>
