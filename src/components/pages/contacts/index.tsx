@@ -2,7 +2,7 @@
 
 import VCFContact from '@/components/pages/main/sections/form/VCFContact';
 import React from 'react';
-import Index from '@/components/ui/styledButton';
+import StyledButton from '@/components/ui/styledButton';
 import useClientLocale from '@/hooks/useClientLocale';
 import { Path } from '@/lib/enums';
 import { useRouter } from 'next/navigation';
@@ -51,7 +51,7 @@ export default function Page() {
                     </ul>
                 </div>
                 <div className={styles.bottomContainer}>
-                    <Index
+                    <StyledButton
                         label={contacts?.button}
                         onClick={handleClick}
                         className={styles.button}

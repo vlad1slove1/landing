@@ -11,6 +11,7 @@ const nextConfig = {
         includePaths: [path.join(__dirname, 'styles'), path.join(__dirname, 'components')],
     },
     i18n,
+    output: 'standalone',
 };
 
 export default nextConfig;
