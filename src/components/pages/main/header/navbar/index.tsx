@@ -6,9 +6,9 @@ import useClientLocale from '@/hooks/useClientLocale';
 import useScrollTo from '@/hooks/useScrollTo';
 import { HEADER_HEIGHT } from '@/lib/constants';
 
-import styles from './Navbar.module.scss';
+import styles from './index.module.scss';
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
     const { translations } = useClientLocale();
     const { navbar } = translations.header ?? {};
     const scrollTo = useScrollTo();
@@ -28,6 +28,4 @@ const Navbar: React.FC = () => {
                 ))}
         </div>
     );
-};
-
-export default Navbar;
+}

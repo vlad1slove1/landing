@@ -4,21 +4,22 @@ import { Link } from '@nextui-org/link';
 import { ElementId, Path } from '@/lib/enums';
 import { Logo } from '@/components/icon/Icons';
 import Image from 'next/image';
-import StyledButtonWrapper from '@/components/pages/styledButton/StyledButtonWrapper';
+import StyledButtonWrapper from '@/components/ui/styledButton/StyledButtonWrapper';
 import ellipse1 from '@/public/ellipse1.svg';
 import ellipse2 from '@/public/ellipse2.svg';
+import { HEADER_HEIGHT } from '@/lib/constants';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
-import styles from './GeneralSection.module.scss';
+import styles from './index.module.scss';
 
-const GeneralSection: React.FC<LangParams> = async ({ locale }) => {
+export default async function GeneralSection({ locale }: LangParams) {
     const t = await getLocale(locale);
     const { h1, p1, h2, button } = t.sections.general;
 
     return (
         <div id={ElementId.GENERAL_SECTION} className={styles.bg}>
-            <div className={styles.section}>
+            <div className={styles.container}>
                 <div className={styles.topContent}>
                     <Link href={Path.HOME}>
                         <Logo className={styles.logo} />
@@ -35,6 +36,7 @@ const GeneralSection: React.FC<LangParams> = async ({ locale }) => {
                     label={button}
                     className={styles.button}
                     scrollTo={ElementId.FORM_SECTION}
+                    scrollOffset={HEADER_HEIGHT}
                 />
             </div>
             <Image alt="White ellipse" src={ellipse1} priority={false} className={styles.bg1} />
@@ -46,6 +48,4 @@ const GeneralSection: React.FC<LangParams> = async ({ locale }) => {
             />
         </div>
     );
-};
-
-export default GeneralSection;
+}

@@ -1,7 +1,8 @@
 'use client';
 
+import VCFContact from '@/components/pages/main/sections/form/VCFContact';
 import React from 'react';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import Index from '@/components/ui/styledButton';
 import useClientLocale from '@/hooks/useClientLocale';
 import { Path } from '@/lib/enums';
 import { useRouter } from 'next/navigation';
@@ -29,8 +30,8 @@ export default function Page() {
                     <Logo className={styles.logo} />
                     <ul>
                         {contacts &&
-                            Object.values(contacts?.contacts).map(
-                                ({ fullName, position, email, phone }, idx) => (
+                            Object.entries(contacts?.contacts).map(
+                                ([contactName, { fullName, position, email, phone }], idx) => (
                                     <li key={idx}>
                                         <h1>{fullName}</h1>
                                         <h2>{position}</h2>
@@ -40,13 +41,17 @@ export default function Page() {
                                         <Link isExternal href={phone}>
                                             {phone.split(':')[1]}
                                         </Link>
+                                        <VCFContact
+                                            contactName={contactName}
+                                            label={contacts?.saveContact}
+                                        />
                                     </li>
                                 )
                             )}
                     </ul>
                 </div>
                 <div className={styles.bottomContainer}>
-                    <StyledButton
+                    <Index
                         label={contacts?.button}
                         onClick={handleClick}
                         className={styles.button}

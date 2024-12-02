@@ -1,12 +1,12 @@
 'use client';
 
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import React from 'react';
 import { Path } from '@/lib/enums';
 import { useRouter } from 'next/navigation';
-import React from 'react';
 import useClientLocale from '@/hooks/useClientLocale';
 import Image from 'next/image';
 import errorBg from '@/public/error-bg.svg';
+import StyledButton from '@/components/ui/styledButton';
 
 import styles from './index.module.scss';
 

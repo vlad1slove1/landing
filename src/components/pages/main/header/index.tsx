@@ -2,8 +2,8 @@
 
 import useScrollTo from '@/hooks/useScrollTo';
 import React from 'react';
-import Navbar from '@/components/pages/main/header/navbar/Navbar';
-import LanguageSelector from '@/components/pages/main/header/languageSelector/LanguageSelector';
+import Navbar from '@/components/pages/main/header/navbar';
+import LanguageSelector from '@/components/pages/main/header/languageSelector';
 import MobileMenu from '@/components/mobile/mobileMenu/MobileMenu';
 import { MOBILE_WIDTH_BREAKPOINT } from '@/lib/constants';
 import useDeviceWidth from '@/hooks/useDeviceWidth';
@@ -11,9 +11,9 @@ import { Logo } from '@/components/icon/Icons';
 import { Link } from '@nextui-org/link';
 import clsx from 'clsx';
 
-import styles from './Header.module.scss';
+import styles from './index.module.scss';
 
-const Header: React.FC = () => {
+export default function Header() {
     const isMobile = useDeviceWidth(MOBILE_WIDTH_BREAKPOINT);
     const scrollTo = useScrollTo();
 
@@ -43,6 +43,4 @@ const Header: React.FC = () => {
             </div>
         </header>
     );
-};
-
-export default Header;
+}

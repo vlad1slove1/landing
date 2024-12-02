@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import useClientLocale from '@/hooks/useClientLocale';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import StyledButton from '@/components/ui/styledButton';
 import { Path } from '@/lib/enums';
 
 import styles from './index.module.scss';

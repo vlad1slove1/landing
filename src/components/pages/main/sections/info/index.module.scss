@@ -2,11 +2,19 @@
 @import '@/styles/mixins';
 @import '@/styles/styles';
 
-.main {
+.bg {
+    background-color: $color-white;
+}
+
+.container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
     @extend .container;
 
-    .container {
+    .main {
         position: relative;
         display: flex;
         margin: 5rem 0;

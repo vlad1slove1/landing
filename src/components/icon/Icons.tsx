@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from '@/public/logo.svg';
-import util from '@/util/util';
+import util from '@/util';
 
 export type LogoProps = {
     className?: string;

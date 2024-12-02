@@ -88,6 +88,7 @@ export type Content = {
     contacts: {
         label: string;
         button: string;
+        saveContact: string;
         contacts: Record<
             string,
             {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '@/components/pages/main/footer/Footer';
-import Header from '@/components/pages/main/header/Header';
+import Footer from '@/components/pages/main/footer';
+import Header from '@/components/pages/main/header';
 
 import type { ReactNode } from 'react';
 

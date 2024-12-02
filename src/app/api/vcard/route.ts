@@ -1,24 +1,26 @@
-import { NextResponse } from 'next/server';
+/* eslint-disable max-len */
 
-export const GET = async () => {
-    const vCardContent = `BEGIN:VCARD
-VERSION:3.0
-FN;CHARSET=UTF-8: Валерий Александрович Мальцев
-N;CHARSET=UTF-8:Мальцев;Валерий;Александрович;;
-NICKNAME;CHARSET=UTF-8:
-UID;CHARSET=UTF-8:
-EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:
-EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:va-maltsev@yandex.ru
-TEL;TYPE=CELL:+79183156986
-ADR;CHARSET=UTF-8;TYPE=HOME:;;;г. Краснодар;;;
-ADR;CHARSET=UTF-8;TYPE=WORK:;;;;;;
-ORG;CHARSET=UTF-8:UPDP
-URL;type=WORK;CHARSET=UTF-8:https://up-bp.ru
-END:VCARD`;
+import { VCF_FILE_EXTENSION } from '@/lib/constants';
+import { NextRequest, NextResponse } from 'next/server';
+import { vCards } from '@/config/config';
+
+export const GET = async (request: NextRequest) => {
+    const searchParams = request.nextUrl.searchParams;
+    const name = searchParams.get('name');
+
+    if (!name) {
+        return NextResponse.json({ error: 'Name parameter is required' }, { status: 400 });
+    }
+
+    const vCardContent = vCards[name.toLowerCase()];
+
+    if (!vCardContent) {
+        return NextResponse.json({ error: `vCard for '${name}' not found` }, { status: 404 });
+    }
 
     const headers = new Headers({
         'Content-Type': 'text/x-vcard;charset=utf-8;',
-        'Content-Disposition': 'attachment; filename="Maltsev_Valeriy_UPBP_Contact.vcf"',
+        'Content-Disposition': `attachment; filename="${name.toLowerCase()}_contact${VCF_FILE_EXTENSION}"`,
     });
 
     return new NextResponse(vCardContent, { headers });

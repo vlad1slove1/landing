@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import Index from '@/components/ui/styledButton/index';
 import useScrollTo from '@/hooks/useScrollTo';
 import { useRouter } from 'next/navigation';
 
-import type { StyledButtonProps } from '@/components/pages/styledButton/StyledButton';
+import type { StyledButtonProps } from '@/components/ui/styledButton/index';
 
 type Props = StyledButtonProps & {
     scrollTo?: string;
@@ -28,7 +28,7 @@ const StyledButtonWrapper: React.FC<Props> = ({
         return redirectTo ? router.push(redirectTo) : scroll(scrollTo!, scrollOffset);
     };
 
-    return <StyledButton label={label} className={className} type={type} onClick={handleClick} />;
+    return <Index label={label} className={className} type={type} onClick={handleClick} />;
 };
 
 export default StyledButtonWrapper;

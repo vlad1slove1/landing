@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-import StyledButton from '@/components/pages/styledButton/StyledButton';
+import StyledButton from '@/components/ui/styledButton';
 import { Checkbox } from '@nextui-org/checkbox';
 import { Input, Textarea } from '@nextui-org/input';
 import clsx from 'clsx';
 import useClientLocale from '@/hooks/useClientLocale';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from '@nextui-org/link';
-import handleFormSubmit from '@/util/handleFormSubmit';
+import handleFormSubmit from '@/components/pages/main/sections/form/handleFormSubmit';
 import { Path } from '@/lib/enums';
 
 import styles from './Form.module.scss';

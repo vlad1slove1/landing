@@ -7,33 +7,35 @@ import { ElementId } from '@/lib/enums';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
-import styles from './ProductsSection.module.scss';
+import styles from './index.module.scss';
 
 type Product = {
     label: string;
     [key: string]: string;
 };
 
-const ProductsSection: React.FC<LangParams> = async ({ locale }) => {
+export default async function ProductsSection({ locale }: LangParams) {
     const t = await getLocale(locale);
     const { label, description, products } = t.sections.products;
 
     return (
-        <div id={ElementId.PRODUCTS_SECTION} className={styles.container}>
-            <div className={styles.topContent}>
-                <ul>
-                    <li>{label}</li>
-                </ul>
-                <h1>{description}</h1>
-            </div>
-            <div className={styles.cards}>
-                {Object.entries(products).map(([key, product]) =>
-                    renderProduct(key, product as unknown as Product)
-                )}
+        <div className={styles.bg}>
+            <div id={ElementId.PRODUCTS_SECTION} className={styles.container}>
+                <div className={styles.topContent}>
+                    <ul>
+                        <li>{label}</li>
+                    </ul>
+                    <h1>{description}</h1>
+                </div>
+                <div className={styles.cards}>
+                    {Object.entries(products).map(([key, product]) =>
+                        renderProduct(key, product as unknown as Product)
+                    )}
+                </div>
             </div>
         </div>
     );
-};
+}
 
 const renderProduct = async (key: string, product: Product) => {
     const { label, ...listItems } = product;
@@ -63,5 +65,3 @@ const renderProduct = async (key: string, product: Product) => {
         </Card>
     );
 };
-
-export default ProductsSection;

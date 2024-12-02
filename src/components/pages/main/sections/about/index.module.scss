@@ -1,0 +1,260 @@
+@import '@/styles/styles';
+@import '@/styles/variables';
+
+.bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include linear-gradient(bottom-right, ($color-bg-2, $color-white 70%))
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+    @extend .container;
+
+    .topContent {
+        display: flex;
+        position: relative;
+        margin-left: auto;
+        margin-top: 2rem;
+
+        h1 {
+            @include responsive(large) {
+                @include fontStyles($font-unbounded, 2cqw, 400, $color-foreground);
+                width: 40vw;
+            }
+
+            @include responsive(medium) {
+                @include fontStyles($font-unbounded, 2.1cqw, 400, $color-foreground);
+                width: 40vw;
+            }
+
+            @include responsive(tablet) {
+                @include fontStyles($font-unbounded, 2.5cqw, 400, $color-foreground);
+                width: 50vw;
+            }
+
+            @include responsive(mobile) {
+                @include fontStyles($font-unbounded, 20px, 400, $color-foreground);
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 2rem 0;
+        width: 100%;
+
+        @include responsive(mobile) {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .firstRow {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: space-between;
+            width: 100%;
+
+            & .card:nth-child(n + 1) {
+                z-index: 1;
+            }
+
+            & .card:nth-child(n + 2) {
+                z-index: 3;
+            }
+
+            @include responsive(large) {
+                flex-direction: row;
+                gap: 0;
+            }
+
+            @include responsive(medium) {
+                flex-direction: row;
+                gap: 0;
+            }
+
+            @include responsive(tablet) {
+                flex-direction: row;
+                gap: 0;
+            }
+        }
+
+        .card {
+            @include linear-gradient(top-left, ($color-bg-2, $color-white));
+            height: auto;
+            padding: 0 1rem;
+
+            @include responsive(large) {
+                width: 650px;
+                padding-left: 5rem !important;
+            }
+
+            @include responsive(medium) {
+                width: 500px;
+                padding-left: 4rem !important;
+            }
+
+            @include responsive(tablet) {
+                width: 300px;
+            }
+
+            @include responsive(mobile) {
+                width: 100%;
+            }
+
+            .cContainer {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                width: 100%;
+
+                @include responsive(large) {
+                    gap: 1rem;
+                }
+
+                @include responsive(medium) {
+                    gap: 1rem;
+                }
+
+                @include responsive(mobile) {
+                    gap: 0;
+                }
+
+                @include responsive(mobile) {
+                    gap: 0;
+                }
+            }
+
+            .cHead {
+                display: flex;
+                align-self: flex-end;
+                position: relative;
+
+                @include responsive(large) {
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+                    transform: translateY(60%);
+                    width: 58%;
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+                    transform: translateY(60%);
+                    width: 70%;
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    transform: translateY(40%);
+                    width: 100%;
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    width: 100%;
+                }
+            }
+
+            .cBody {
+                h2 {
+                    @include responsive(large) {
+                        @include fontStyles($font-unbounded, 150px, 400, $color-foreground);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-unbounded, 120px, 400, $color-foreground);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-unbounded, 70px, 400, $color-foreground);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-unbounded, 36px, 400, $color-foreground);
+                    }
+                }
+
+                h3 {
+                    @include responsive(large) {
+                        @include fontStyles($font-montserrat, 70px, 500, $color-foreground);
+                    }
+
+                    @include responsive(medium) {
+                        @include fontStyles($font-montserrat, 58px, 500, $color-foreground);
+                    }
+
+                    @include responsive(tablet) {
+                        @include fontStyles($font-montserrat, 45px, 500, $color-foreground);
+                    }
+
+                    @include responsive(mobile) {
+                        @include fontStyles($font-montserrat, 24px, 500, $color-foreground);
+                    }
+                }
+            }
+
+            .cFoot {
+                display: flex;
+                align-self: flex-end;
+                position: relative;
+
+                @include responsive(large) {
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+                    transform: translateY(-55%);
+                    width: 58%;
+                }
+
+                @include responsive(medium) {
+                    @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+                    width: 80%;
+                }
+
+                @include responsive(tablet) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    transform: translateY(-40%);
+                    width: 100%;
+                }
+
+                @include responsive(mobile) {
+                    @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+                    width: 100%;
+                }
+            }
+        }
+
+        .customCard {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            z-index: 2;
+
+            @include responsive(large) {
+                transform: translateY(-6rem);
+            }
+
+            @include responsive(medium) {
+                transform: translateY(-6rem);
+            }
+
+            @include responsive(tablet) {
+                transform: translateY(-3rem);
+            }
+
+            @include responsive(mobile) {
+                align-items: center;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}

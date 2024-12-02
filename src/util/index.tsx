@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 import clsx from 'clsx';
 import { IconSVGProps } from '@/types/iconSVGProps';
 
-const util = {
+export default {
     createIcon: (
         paths: ReactNode,
         viewBox: string = '0 0 24 24',
@@ -49,5 +49,3 @@ const util = {
         };
     },
 };
-
-export default util;

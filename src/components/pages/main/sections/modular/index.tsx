@@ -4,15 +4,15 @@ import { ElementId } from '@/lib/enums';
 
 import type { LangParams } from '@/app/[locale]/layout';
 
-import styles from './ModularSection.module.scss';
+import styles from './index.module.scss';
 
-const ModularSection: React.FC<LangParams> = async ({ locale }) => {
+export default async function ModularSection({ locale }: LangParams) {
     const t = await getLocale(locale);
     const { label, solutions } = t.sections.modular;
 
     return (
-        <div id={ElementId.MODULAR_SECTION} className={styles.bg}>
-            <div className={styles.container}>
+        <div className={styles.bg}>
+            <div id={ElementId.MODULAR_SECTION} className={styles.container}>
                 <div className={styles.topContent}>
                     <ul>
                         <li>{label}</li>
@@ -35,6 +35,4 @@ const ModularSection: React.FC<LangParams> = async ({ locale }) => {
             </div>
         </div>
     );
-};
-
-export default ModularSection;
+}

@@ -21,7 +21,7 @@
     "sections": {
         "general": {
             "h1": "Unlimited performance business processes",
-            "p1": "We offer ready-made software solutions, and also create individual information products for business automation and gaining a competitive advantage",
+            "p1": "We offer ready-made software solutions. We create custom information products to automate business and gain a competitive advantage",
             "h2": "We make the complex simple, the incomprehensible clear, the slow fast",
             "button": "Get a consultation"
         },
@@ -191,8 +191,7 @@
             },
 
             "privacyPolicy": "Privacy policy",
-            "submitButton": "Submit",
-            "saveContact": "Save contact"
+            "submitButton": "Submit"
         }
     },
 
@@ -239,6 +238,7 @@
     "contacts": {
         "label": "Contacts",
         "button": "Go to website",
+        "saveContact": "Save contact",
         "contacts": {
             "c1": {
                 "fullName": "Dmitry Viktorovich Terentyev",

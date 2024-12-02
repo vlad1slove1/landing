@@ -3,7 +3,7 @@ import Image from 'next/image';
 import arrowRight from '@/public/arrow-right.svg';
 import clsx from 'clsx';
 
-import styles from './StyledButton.module.scss';
+import styles from './index.module.scss';
 
 export type StyledButtonProps = {
     label: string;
@@ -12,12 +12,12 @@ export type StyledButtonProps = {
     onClick?: () => void;
 };
 
-const StyledButton: React.FC<StyledButtonProps> = ({
+export default function StyledButton({
     label,
     type = 'button',
     onClick,
     className,
-}) => {
+}: StyledButtonProps) {
     return (
         <button type={type} onClick={onClick} className={clsx(styles.styledButton, className)}>
             <div className={styles.iconWrapper}>
@@ -28,6 +28,4 @@ const StyledButton: React.FC<StyledButtonProps> = ({
             <span className={styles.label}>{label}</span>
         </button>
     );
-};
-
-export default StyledButton;
+}

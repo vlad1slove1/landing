@@ -1,0 +1,194 @@
+@import '@/styles/styles';
+@import '@/styles/variables';
+
+.bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-1;
+    @include linear-gradient(bottom-right, ($color-bg-1 50%, $color-bg-2));
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+
+    @extend .container;
+
+    .topContent {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+
+        @include responsive(mobile) {
+            gap: 0;
+        }
+    }
+
+    .logo {
+        @include responsive(large) {
+            margin-top: 1.2rem;
+        }
+
+        @include responsive(medium) {
+            margin-top: 0.5rem !important;
+        }
+
+        @include responsive(mobile) {
+            display: none;
+        }
+    }
+
+    .h1 {
+        display: flex;
+
+        @include responsive(large) {
+            @include fontStyles($font-unbounded, 5cqw, 800, $color-white);
+        }
+
+        @include responsive(medium) {
+            @include fontStyles($font-unbounded, 4.7cqw, 800, $color-white);
+        }
+
+        @include responsive(tablet) {
+            @include fontStyles($font-unbounded, 5cqw, 800, $color-white);
+        }
+
+        @include responsive(mobile) {
+            @include fontStyles($font-unbounded, 32px, 800, $color-white);
+            margin-top: 2rem;
+        }
+    }
+
+    .p1 {
+        display: flex;
+        position: relative;
+        margin-left: auto;
+        margin-top: 4rem;
+        z-index: 4;
+
+        @include responsive(large) {
+            @include fontStyles($font-montserrat, 18px, 500, $color-foreground);
+            width: 32%;
+        }
+
+        @include responsive(medium) {
+            @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+            width: 400px;
+            margin-top: 2rem;
+        }
+
+        @include responsive(tablet) {
+            @include fontStyles($font-montserrat, 16px, 500, $color-foreground);
+            width: 400px;
+            margin-top: 2rem;
+        }
+
+        @include responsive(mobile) {
+            @include fontStyles($font-montserrat, 14px, 500, $color-foreground);
+            margin-top: 2.5rem;
+            margin-left: 4rem;
+        }
+    }
+
+    .h2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        z-index: 4;
+
+        @include responsive(large) {
+            @include fontStyles($font-unbounded, 55px, 400, $color-foreground);
+            width: 60%;
+        }
+
+        @include responsive(medium) {
+            @include fontStyles($font-unbounded, 40px, 400, $color-foreground);
+            width: 60%;
+            margin-top: 3rem;
+        }
+
+        @include responsive(tablet) {
+            @include fontStyles($font-unbounded, 30px, 400, $color-foreground);
+        }
+
+        @include responsive(mobile) {
+            @include fontStyles($font-unbounded, 16px, 400, $color-foreground);
+            margin-top: 3rem;
+        }
+    }
+
+    .button {
+        display: flex;
+        align-self: end;
+        z-index: 4;
+
+        @include responsive(large) {
+            margin-top: 1rem;
+            margin-bottom: 4.4rem;
+        }
+
+        @include responsive(medium) {
+            margin-top: 1rem;
+            margin-bottom: 4.4rem;
+        }
+
+        @include responsive(tablet) {
+            align-self: center;
+            margin: 1.5rem 0;
+        }
+
+        @include responsive(mobile) {
+            align-self: center;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.bg1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    height: auto;
+    object-fit: cover;
+
+    @include responsive(large) {
+        width: 75%;
+    }
+
+    @include responsive(medium) {
+        width: 80%;
+    }
+
+    @include responsive(mobile) {
+        display: none;
+    }
+}
+
+.bg2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: auto;
+    object-fit: cover;
+
+    @include responsive(large) {
+        width: 57%;
+    }
+
+    @include responsive(medium) {
+        width: 66%;
+    }
+
+    @include responsive(mobile) {
+        display: none;
+    }
+}

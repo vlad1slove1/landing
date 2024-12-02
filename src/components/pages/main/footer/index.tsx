@@ -10,9 +10,9 @@ import Image from 'next/image';
 import arrowTop from '@/public/arrow-top.svg';
 import useScrollTo from '@/hooks/useScrollTo';
 
-import styles from './Footer.module.scss';
+import styles from './index.module.scss';
 
-const Footer: React.FC = () => {
+export default function Footer() {
     const { translations } = useClientLocale();
     const { requisites, contacts, links } = translations.footer ?? {};
     const { form } = translations?.sections ?? {};
@@ -73,6 +73,4 @@ const Footer: React.FC = () => {
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}

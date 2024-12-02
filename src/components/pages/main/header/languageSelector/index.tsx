@@ -11,7 +11,7 @@ import { Button } from '@nextui-org/button';
 import { fontMontserrat } from '@/config/fonts';
 import Image from 'next/image';
 
-const LanguageSelector: React.FC = () => {
+export default function LanguageSelector() {
     const { locale } = useClientLocale();
     const router = useRouter();
     const [imageMap, setImageMap] = useState<Record<string, string>>({});
@@ -29,7 +29,7 @@ const LanguageSelector: React.FC = () => {
             setImageMap(images);
         };
 
-        preloadImages();
+        preloadImages().then();
     }, []);
 
     return (
@@ -73,6 +73,4 @@ const LanguageSelector: React.FC = () => {
             </DropdownMenu>
         </Dropdown>
     );
-};
-
-export default LanguageSelector;
+}
