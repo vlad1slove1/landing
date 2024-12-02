@@ -83,3 +83,51 @@ docker run -p 3000:3000 landing
 ```
 
 Now app is up and running on http://localhost:3000
+___
+## 🚢 Docker image as systemd service
+
+### 1. Create a new service file:
+
+Create a new service file in /etc/systemd/system/:
+
+```bash
+sudo nano /etc/systemd/system/landing.service
+```
+
+Add the following content:
+
+```                
+[Unit]
+Description=landing container
+After=docker.service
+Wants=network-online.target docker.socket
+Requires=docker.socket
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run -p 3000:3000 landing
+ExecStop=/usr/bin/docker stop landing
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### 2. Enable and Start the Service
+
+Enable and start the service using:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable landing.service
+sudo systemctl start landing.service
+```
+
+### 3. Check the Status
+
+Verify that the service is running:
+
+```bash
+sudo systemctl status landing.service
+```
+
+Now the Dockerized app is running as a systemd service!
