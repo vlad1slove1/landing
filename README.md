@@ -7,7 +7,47 @@ ___
 ___
 ## 📦 Project Setup Guide
 
-Follow these simple steps to get the project up and running:
+### ⚙️ Prerequisites
+
+⚠️ **Project requires Node.js v18 and npm v9.8.1 (or later)**
+
+Use nvm (Node Version Manager) to install and manage the required versions of Node.js and npm:
+
+1) Install nvm:
+    If nvm isn't installed, follow the official installation [guide](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating).
+
+    Or, run this commands:
+    ```bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+    ```
+    
+    ```bash
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+    ```
+    
+    ```bash
+    # These should pick up the nvm command
+    source ~/.bashrc
+    ```
+
+2) Install Node.js (v18 or higher) and npm (latest):
+
+   This will install the latest long-term support (LTS) version of Node.js and the latest compatible npm version.
+
+    ```bash
+    nvm install --lts  
+    nvm use --lts  
+    ```
+
+3) Verify installation:
+
+    ```bash
+    node -v  
+    npm -v  
+    ```
+___
+### 📥 Follow these simple steps to get the project up and running:
 
 ### 1. Clone the Repository
 
