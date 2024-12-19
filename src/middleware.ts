@@ -20,15 +20,24 @@ function getLocale(request: NextRequest): string {
 }
 
 export function middleware(request: NextRequest) {
-    if (request.nextUrl.pathname.startsWith('/_next')) return NextResponse.next();
+    const { pathname } = request.nextUrl;
+
+    // Skip translation logic for robots.txt, sitemap.xml, and static files
+    if (
+        pathname === '/robots.txt' ||
+        pathname === '/sitemap.xml' ||
+        pathname.startsWith('/_next') ||
+        pathname === '/favicon.ico'
+    ) {
+        return NextResponse.next();
+    }
 
     // Check if there is any supported locale in the pathname
-    const { pathname } = request.nextUrl;
     const pathnameHasLocale = locales.some(
         (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     );
 
-    if (pathnameHasLocale) return;
+    if (pathnameHasLocale) return NextResponse.next();
 
     // Redirect if there is no locale
     const locale = getLocale(request);
@@ -47,7 +56,9 @@ export const config = {
          * - _next/static (static files)
          * - _next/image (image optimization files)
          * - favicon.ico (favicon file)
+         * - robots.txt (robots file)
+         * - sitemap.xml (sitemap file)
          */
-        '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
     ],
 };

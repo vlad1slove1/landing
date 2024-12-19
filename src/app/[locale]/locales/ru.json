@@ -1,4 +1,14 @@
 {
+    "meta": {
+        "title": "Бизнес-решения Unlimited Performance",
+        "description": "Ведущий поставщик бизнес-решений",
+        "openGraph": {
+            "locale": "ru",
+            "title": "Бизнес-решения Unlimited Performance",
+            "description": "Ведущий поставщик бизнес-решений"
+        }
+    },
+
     "header": {
         "navbar": {
             "about": {

@@ -1,4 +1,10 @@
 export type Content = {
+    meta: {
+        title: string;
+        description: string;
+        openGraph: Record<string, string>;
+    };
+
     header: {
         navbar: Record<string, { label: string; scrollId?: string; href?: string }>;
     };

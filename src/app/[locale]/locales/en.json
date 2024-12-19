@@ -1,4 +1,14 @@
 {
+    "meta": {
+        "title": "Unlimited Performance Business Solutions",
+        "description": "Leading business solutions provider",
+        "openGraph": {
+            "locale": "en",
+            "title": "Unlimited Performance Business Solutions",
+            "description": "Leading business solutions provider"
+        }
+    },
+
     "header": {
         "navbar": {
             "about": {

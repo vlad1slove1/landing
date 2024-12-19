@@ -76,9 +76,11 @@ cp .env.example .env
 
 Then open the .env file and set the appropriate values for your environment variables:
 
-```bash
+```
 NEXT_PUBLIC_TELEGRAM_BOT_TOKEN=personal bot token
 NEXT_PUBLIC_TELEGRAM_CHAT_ID=chat_id for specific telegram group
+
+NEXT_PUBLIC_SITE_URL=production url for backend utilities
 ```
 
 Save the .env file after updating all the variables
