@@ -27,11 +27,11 @@ const CustomLink: React.FC<Props> = ({
     const scrollTo = useScrollTo();
 
     const handleClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-
         if (scrollId) {
+            e.preventDefault();
             scrollTo(scrollId, offset);
         } else if (href && href === '#') {
+            e.preventDefault();
             scrollTo(0, offset);
         }
     };
