@@ -1,22 +1,17 @@
-'use client';
-
 import React from 'react';
-import useClientLocale from '@/hooks/useClientLocale';
-import { HEADER_HEIGHT } from '@/lib/constants';
+import getLocale from '@/app/[locale]/getLocale';
+import CustomLink from '@/components/ui/customLink';
 import { Path } from '@/lib/enums';
 import { Divider } from '@nextui-org/divider';
-import { Link } from '@nextui-org/link';
 import Image from 'next/image';
 import arrowTop from '@/public/arrow-top.svg';
-import useScrollTo from '@/hooks/useScrollTo';
 
 import styles from './index.module.scss';
 
-export default function Footer() {
-    const { translations } = useClientLocale();
-    const { requisites, contacts, links } = translations.footer ?? {};
-    const { form } = translations?.sections ?? {};
-    const scrollTo = useScrollTo();
+export default async function Footer({ locale }: { locale: string }) {
+    const t = await getLocale(locale);
+    const { requisites, contacts, links } = t.footer;
+    const { form } = t.sections;
 
     return (
         <footer>
@@ -35,9 +30,9 @@ export default function Footer() {
                                 Object.values(contacts).map(({ label, href, text }, idx) => (
                                     <li key={idx}>
                                         {label}:&nbsp;
-                                        <Link href={href} isExternal>
+                                        <CustomLink href={href} isExternal>
                                             {text ? text : href}
-                                        </Link>
+                                        </CustomLink>
                                     </li>
                                 ))}
                         </ul>
@@ -48,14 +43,13 @@ export default function Footer() {
                             {links &&
                                 Object.values(links).map(({ label, href, scrollId }, idx) => (
                                     <li key={idx} className="cursor-pointer">
-                                        <Link
-                                            href={href ? href : undefined}
-                                            onClick={() =>
-                                                scrollId ? scrollTo(scrollId, HEADER_HEIGHT) : null
-                                            }
+                                        <CustomLink
+                                            href={href || undefined}
+                                            scrollId={scrollId}
+                                            className={styles.link}
                                         >
                                             {label}
-                                        </Link>
+                                        </CustomLink>
                                     </li>
                                 ))}
                         </ul>
@@ -63,11 +57,11 @@ export default function Footer() {
                     <Divider />
 
                     <div className={styles.policyContainer}>
-                        <Link href={Path.PRIVACY}>{form?.privacyPolicy}</Link>
+                        <CustomLink href={Path.PRIVACY}>{form?.privacyPolicy}</CustomLink>
 
-                        <Link onClick={() => scrollTo(0)} className="cursor-pointer">
+                        <CustomLink href="#" className="cursor-pointer" scrollId={undefined}>
                             <Image src={arrowTop} alt="Arrow-top" />
-                        </Link>
+                        </CustomLink>
                     </div>
                 </div>
             </div>

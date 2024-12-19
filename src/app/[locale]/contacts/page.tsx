@@ -1,9 +1,11 @@
 import PageLayout from '@/components/PageLayout';
 import ContactsPage from '@/components/pages/contacts';
 
-export default function Page() {
+import type { LangParams } from '@/app/[locale]/layout';
+
+export default function Page({ params }: { params: LangParams }) {
     return (
-        <PageLayout showHeader={false} showFooter={false}>
+        <PageLayout locale={params.locale} showHeader={false} showFooter={false}>
             <ContactsPage />
         </PageLayout>
     );

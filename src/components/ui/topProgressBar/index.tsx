@@ -47,6 +47,11 @@ export default function TopProgressBar() {
     }, [isAnimating, completeProgress]);
 
     return isAnimating ? (
-        <Progress value={progress} color="primary" className={styles.progressBar} />
+        <Progress
+            value={progress}
+            color="primary"
+            className={styles.progressBar}
+            aria-label={`Progress: ${Math.round(progress)}%`}
+        />
     ) : null;
 }

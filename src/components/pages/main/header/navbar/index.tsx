@@ -1,31 +1,31 @@
-'use client';
-
+import LanguageSelector from '@/components/pages/main/header/languageSelector';
 import React from 'react';
-import { Link } from '@nextui-org/link';
-import useClientLocale from '@/hooks/useClientLocale';
-import useScrollTo from '@/hooks/useScrollTo';
-import { HEADER_HEIGHT } from '@/lib/constants';
+import getLocale from '@/app/[locale]/getLocale';
+import CustomLink from '@/components/ui/customLink';
 
 import styles from './index.module.scss';
 
-export default function Navbar() {
-    const { translations } = useClientLocale();
-    const { navbar } = translations.header ?? {};
-    const scrollTo = useScrollTo();
+export default async function Navbar({ locale }: { locale: string }) {
+    const t = await getLocale(locale);
+    const { navbar } = t.header;
 
     return (
         <div className={styles.navbar}>
-            {navbar &&
-                Object.values(navbar).map(({ label, scrollId, href }, idx) => (
-                    <Link
-                        key={idx}
-                        href={href ? href : undefined}
-                        onClick={() => (scrollId ? scrollTo(scrollId, HEADER_HEIGHT) : null)}
-                        className={styles.link}
-                    >
-                        {label}
-                    </Link>
-                ))}
+            <div className={styles.items}>
+                {navbar &&
+                    Object.values(navbar).map(({ label, scrollId, href }, idx) => (
+                        <CustomLink
+                            key={idx}
+                            href={href ? href : undefined}
+                            scrollId={scrollId}
+                            className={styles.link}
+                        >
+                            {label}
+                        </CustomLink>
+                    ))}
+            </div>
+
+            <LanguageSelector />
         </div>
     );
 }

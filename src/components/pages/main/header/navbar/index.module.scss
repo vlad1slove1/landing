@@ -7,6 +7,19 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
+
+    @include responsive(tablet) {
+        display: none;
+    }
+
+    @include responsive(mobile) {
+        display: none;
+    }
+
+    .items {
+        display: flex;
+        gap: 2rem;
+    }
 }
 
 .link {

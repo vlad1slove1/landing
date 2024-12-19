@@ -13,7 +13,7 @@ import type { LangParams } from '@/app/[locale]/layout';
 
 export default function Page({ params }: { params: LangParams }) {
     return (
-        <PageLayout showHeader showFooter>
+        <PageLayout locale={params.locale} showHeader showFooter>
             <GeneralSection locale={params.locale} />
             <AboutSection locale={params.locale} />
             <ServicesSection locale={params.locale} />

@@ -6,19 +6,21 @@ import type { ReactNode } from 'react';
 
 type PageLayoutProps = {
     children: ReactNode;
+    locale?: string;
     showHeader?: boolean;
     showFooter?: boolean;
 };
 
 const PageLayout: React.FC<PageLayoutProps> = ({
     children,
+    locale = '',
     showHeader = false,
     showFooter = false,
 }) => (
     <>
-        {showHeader && <Header />}
+        {showHeader && <Header locale={locale} />}
         <main>{children}</main>
-        {showFooter && <Footer />}
+        {showFooter && <Footer locale={locale} />}
     </>
 );
 

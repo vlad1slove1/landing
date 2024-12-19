@@ -1,9 +1,11 @@
 import PageLayout from '@/components/PageLayout';
 import PolicyPage from '@/components/pages/policy';
 
-export default function Page() {
+import type { LangParams } from '@/app/[locale]/layout';
+
+export default function Page({ params }: { params: LangParams }) {
     return (
-        <PageLayout showHeader={false} showFooter={false}>
+        <PageLayout locale={params.locale} showHeader={false} showFooter={false}>
             <PolicyPage />
         </PageLayout>
     );
