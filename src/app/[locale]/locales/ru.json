@@ -6,6 +6,11 @@
             "locale": "ru",
             "title": "Бизнес-решения Unlimited Performance",
             "description": "Ведущий поставщик бизнес-решений"
+        },
+        "twitter": {
+            "card": "summary_large_image",
+            "title": "Бизнес-решения Unlimited Performance",
+            "description": "Ведущий поставщик бизнес-решений"
         }
     },
 

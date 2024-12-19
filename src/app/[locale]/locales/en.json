@@ -6,6 +6,11 @@
             "locale": "en",
             "title": "Unlimited Performance Business Solutions",
             "description": "Leading business solutions provider"
+        },
+        "twitter": {
+            "card": "summary_large_image",
+            "title": "Unlimited Performance Business Solutions",
+            "description": "Leading business solutions provider"
         }
     },
 

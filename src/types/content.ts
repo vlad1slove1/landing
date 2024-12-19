@@ -3,6 +3,7 @@ export type Content = {
         title: string;
         description: string;
         openGraph: Record<string, string>;
+        twitter: Record<string, string>;
     };
 
     header: {
