@@ -39,7 +39,7 @@ export async function generateMetadata({
             siteName: 'Unlimited performance business processes',
             images: [
                 {
-                    url: '',
+                    url: 'https://raw.githubusercontent.com/vlad1slove1/landing/0d874073855452e04528c7115534401a4d4fa938/src/public/opengraph_logo.svg',
                     width: 1200,
                     height: 630,
                     alt: `${openGraph.title} - OpenGraph Image`,
