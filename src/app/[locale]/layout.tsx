@@ -3,6 +3,7 @@ import React from 'react';
 import Providers from '@/app/[locale]/providers';
 import clsx from 'clsx';
 import { fontMontserrat, fontUnbounded } from '@/config/fonts';
+import WebVitals from '@/web-vitals';
 
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
@@ -42,7 +43,25 @@ export async function generateMetadata({
                     url: 'https://raw.githubusercontent.com/vlad1slove1/landing/0d874073855452e04528c7115534401a4d4fa938/src/public/opengraph_logo.svg',
                     width: 1200,
                     height: 630,
-                    alt: `${openGraph.title} - OpenGraph Image`,
+                    alt: `${openGraph.title} - OpenGraph Image (1200x630)`,
+                },
+                {
+                    url: 'https://raw.githubusercontent.com/vlad1slove1/landing/0d874073855452e04528c7115534401a4d4fa938/src/public/opengraph_logo.svg',
+                    width: 600,
+                    height: 315,
+                    alt: `${openGraph.title} - OpenGraph Image (600x315)`,
+                },
+                {
+                    url: 'https://raw.githubusercontent.com/vlad1slove1/landing/0d874073855452e04528c7115534401a4d4fa938/src/public/opengraph_logo.svg',
+                    width: 1200,
+                    height: 1200,
+                    alt: `${openGraph.title} - OpenGraph Image (1200x1200)`,
+                },
+                {
+                    url: 'https://raw.githubusercontent.com/vlad1slove1/landing/0d874073855452e04528c7115534401a4d4fa938/src/public/opengraph_logo.svg',
+                    width: 400,
+                    height: 400,
+                    alt: `${openGraph.title} - OpenGraph Image (400x400)`,
                 },
             ],
         },
@@ -67,7 +86,10 @@ export default function RootLayout({
     return (
         <html lang={params.locale} suppressHydrationWarning>
             <body className={clsx('antialiased', fontMontserrat.variable, fontUnbounded.variable)}>
-                <Providers params={params}>{children}</Providers>
+                <Providers params={params}>
+                    {children}
+                    <WebVitals />
+                </Providers>
             </body>
         </html>
     );
