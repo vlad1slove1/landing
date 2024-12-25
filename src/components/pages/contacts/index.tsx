@@ -5,7 +5,6 @@ import React from 'react';
 import StyledButton from '@/components/ui/styledButton';
 import useClientLocale from '@/hooks/useClientLocale';
 import { Path } from '@/lib/enums';
-import { useRouter } from 'next/navigation';
 import { Logo } from '@/components/icon/Icons';
 import { Link } from '@nextui-org/link';
 
@@ -14,11 +13,6 @@ import styles from './index.module.scss';
 export default function Page() {
     const { translations } = useClientLocale();
     const { contacts } = translations;
-    const router = useRouter();
-
-    const handleClick = () => {
-        return router.push(Path.HOME);
-    };
 
     return (
         <div className={styles.bg}>
@@ -53,7 +47,7 @@ export default function Page() {
                 <div className={styles.bottomContainer}>
                     <StyledButton
                         label={contacts?.button}
-                        onClick={handleClick}
+                        href={Path.HOME}
                         className={styles.button}
                     />
                 </div>

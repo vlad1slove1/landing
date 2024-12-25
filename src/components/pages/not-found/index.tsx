@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Path } from '@/lib/enums';
-import { useRouter } from 'next/navigation';
 import useClientLocale from '@/hooks/useClientLocale';
 import Image from 'next/image';
 import errorBg from '@/public/error-bg.svg';
@@ -13,11 +12,6 @@ import styles from './index.module.scss';
 export default function Page() {
     const { translations } = useClientLocale();
     const { notFound } = translations;
-    const router = useRouter();
-
-    const handleClick = () => {
-        return router.push(Path.HOME);
-    };
 
     return (
         <div className={styles.bg}>
@@ -29,7 +23,7 @@ export default function Page() {
                 <div className={styles.descriptionContainer}>
                     <h3>{notFound?.label}</h3>
                     <p>{notFound?.description}</p>
-                    <StyledButton label={notFound?.button} onClick={handleClick} />
+                    <StyledButton label={notFound?.button} href={Path.HOME} />
                 </div>
             </div>
         </div>

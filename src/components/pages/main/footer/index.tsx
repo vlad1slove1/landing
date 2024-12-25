@@ -5,6 +5,7 @@ import { Path } from '@/lib/enums';
 import { Divider } from '@nextui-org/divider';
 import Image from 'next/image';
 import arrowTop from '@/public/arrow-top.svg';
+import { HEADER_HEIGHT } from '@/lib/constants';
 
 import styles from './index.module.scss';
 
@@ -44,8 +45,9 @@ export default async function Footer({ locale }: { locale: string }) {
                                 Object.values(links).map(({ label, href, scrollId }, idx) => (
                                     <li key={idx} className="cursor-pointer">
                                         <CustomLink
-                                            href={href || undefined}
+                                            href={href || '#'}
                                             scrollId={scrollId}
+                                            offset={HEADER_HEIGHT}
                                             className={styles.link}
                                         >
                                             {label}

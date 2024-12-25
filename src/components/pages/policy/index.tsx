@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import useClientLocale from '@/hooks/useClientLocale';
 import StyledButton from '@/components/ui/styledButton';
 import { Path } from '@/lib/enums';
@@ -8,14 +7,9 @@ import { Path } from '@/lib/enums';
 import styles from './index.module.scss';
 
 export default function Page() {
-    const router = useRouter();
     const {
         translations: { policy },
     } = useClientLocale();
-
-    const handleClick = () => {
-        return router.push(Path.HOME);
-    };
 
     const renderArticles = (articles: Record<string, unknown>) => {
         return (
@@ -66,7 +60,7 @@ export default function Page() {
 
                 <StyledButton
                     label={policy?.button}
-                    onClick={handleClick}
+                    href={Path.HOME}
                     className="flex self-center mt-6 mb-10"
                 />
             </div>

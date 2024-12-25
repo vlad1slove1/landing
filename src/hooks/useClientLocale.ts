@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { LocaleContext } from '@/context';
+import { LocaleContext } from '@/context/LocaleContext';
 
 import type { Content } from '@/types/content';
 
