@@ -38,6 +38,10 @@
             margin-top: 0.5rem !important;
         }
 
+        @include responsive(tablet) {
+            display: none;
+        }
+
         @include responsive(mobile) {
             display: none;
         }
